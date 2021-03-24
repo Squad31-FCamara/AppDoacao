@@ -2,7 +2,7 @@ const express = require('express');
 const app = express (); 
 const Sequelize = require('sequelize')
 
-    //ConexÃ£o com banco de dados 
+    //Conexão com banco de dados 
     const sequelize = new Sequelize('fcamara','root','12345', {
     host: "localhost",
     dialect: 'mysql'
@@ -18,4 +18,4 @@ const Sequelize = require('sequelize')
         res.sendFile(__dirname +"/cadastro-doador.html")
     })
     app.listen(8081, function(){
-    console.log("EstÃ¡ rodando em http://localhost:8081");});
+    console.log("Está rodando em http://localhost:8081");});
