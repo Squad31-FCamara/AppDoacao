@@ -1,8 +1,47 @@
-/* const conexao = require('../infraestrutura/conexao')
+const conexao = require('../infraestrutura/conexao')
 
 class Donatario{
 
     adiciona(donatario, res){
-        const cpf = donatario.cpf
+        
+        const sql = `INSERT INTO donatario SET ?`
+
+        conexao.query(sql, donatario, (error, results) => {
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(201).json({'mensagem': `Cadastro foi criado com sucesso`})
+            }
+        })
     }
-} */
+
+    listar(res){
+        
+        const sql = `SELECT * FROM donatario`
+
+        conexao.query(sql, (error, results) => {
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(200).json(results)
+            }
+        })
+    }
+
+    buscaPorIdEscola(id, res){
+
+        const sql = `SELECT d.nome_donatario, d.lista_material, e.nome_escola 
+        FROM donatario AS d INNER JOIN escola AS e ON d.escola_donatario = e.id_escola
+        WHERE e.id_escola = ${id}`
+
+        conexao.query(sql, (error, results) => {
+            const donatarios = results
+
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(200).json(donatarios)
+            }
+        })
+    } 
+}

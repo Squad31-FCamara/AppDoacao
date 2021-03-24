@@ -29,11 +29,11 @@ class Tabelas {
             ra_donatario VARCHAR(8) NOT NULL,
             lista_material VARCHAR(255),
             celular_responsavel VARCHAR(11),
-            id_escola_donatario int,
+            escola_donatario int,
             nome_donatario VARCHAR(60),
             email_responsavel VARCHAR(40),
             PRIMARY KEY (id_donatario),
-            FOREIGN KEY (id_escola_donatario) REFERENCES escola(id_escola));`
+            FOREIGN KEY (escola_donatario) REFERENCES escola(id_escola));`
 
         this.conexao.query(sql,(error) => {
             if(error){
