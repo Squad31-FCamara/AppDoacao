@@ -1,21 +1,16 @@
-const express = require('express');
-const app = express (); 
-const Sequelize = require('sequelize')
+const configExpress = require('./config/configExpress');
+const conexao = require('./infraestrutura/conexao')
+const Tabelas = require('./infraestrutura/tabelas')
 
-    //Conexão com banco de dados 
-    const sequelize = new Sequelize('fcamara','root','12345', {
-    host: "localhost",
-    dialect: 'mysql'
-    })
-    //Rotas 
-    app.get('/', function(req, res){
-        res.sendFile(__dirname +"/index.html")
-    })
-    app.get('/cadastroaluno', function(req, res){
-        res.sendFile(__dirname +"/cadastro-aluno.html")
-    })
-    app.get('/cadastrodoador', function(req, res){
-        res.sendFile(__dirname +"/cadastro-doador.html")
-    })
-    app.listen(8081, function(){
-    console.log("Está rodando em http://localhost:8081");});
+conexao.connect((error) => {
+    if(error){
+        console.log(error)
+    } else {
+        console.log('Conectado ao BD com sucesso')
+
+        Tabelas.init(conexao)
+        const app = configExpress()
+
+        app.listen(3333, () => console.log('Servidor rodando na porta 3333'))
+    }
+})
