@@ -12,7 +12,7 @@ module.exports = () => {
     app.set('views', './src/views/');
 
 
-    consign()
+    consign() //irá agrupar todas as rotas criadas dentro do app
         .include('controllers')
         .into(app)
 

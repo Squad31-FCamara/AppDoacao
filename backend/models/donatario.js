@@ -15,7 +15,7 @@ class Donatario{
         })
     }
 
-    listar(res){
+    lista(res){
         
         const sql = `SELECT * FROM donatario`
 
@@ -45,3 +45,5 @@ class Donatario{
         })
     } 
 }
+
+module.exports = new Donatario
