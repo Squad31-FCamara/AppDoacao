@@ -43,6 +43,7 @@ class Tabelas {
             cidade VARCHAR(30),
             uf VARCHAR(2),
             escola_donatario int,
+            tipo_doacao VARCHAR(30),
             lista_material VARCHAR(255),
             data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (id_donatario),
