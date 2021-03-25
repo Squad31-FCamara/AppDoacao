@@ -9,7 +9,7 @@ module.exports = () => {
     app.use(bodyParser.json())
 
     app.set('view engine', 'ejs');
-    app.set('views', './src/views/');
+    app.set('views', '../../frontend/');
 
 
     consign() //irá agrupar todas as rotas criadas dentro do app
