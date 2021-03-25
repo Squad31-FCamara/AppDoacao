@@ -43,7 +43,21 @@ class Donatario{
                 res.status(200).json(donatarios)
             }
         })
-    } 
+    }
+
+    buscaPorId(id, res){
+        const sql = `SELECT * FROM donatario WHERE id_donatario = ${id}`
+
+        conexao.query(sql, (error, results) => {
+            const donatario = results[0]
+
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(200).json(donatario)
+            }
+        })
+    }
 }
 
 module.exports = new Donatario

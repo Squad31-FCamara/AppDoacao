@@ -14,10 +14,17 @@ module.exports = app => {
         Donatario.adiciona(donatario, res)
     })
 
-    app.get('/donatarios/:id', (req, res) => {
+    app.get('/donatarios/escola/:id', (req, res) => {
 
         const id = parseInt(req.params.id)
 
         Donatario.buscaPorIdEscola(id, res)
+    })
+
+    app.get('/donatarios/:id', (req, res) => {
+
+        const id = parseInt(req.params.id)
+
+        Donatario.buscaPorId(id, res)
     })
 }
