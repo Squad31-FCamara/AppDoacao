@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 25/03/2021 às 11:05
+-- Tempo de geração: 25/03/2021 às 12:02
 -- Versão do servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versão do PHP: 7.4.3
 
@@ -49,6 +49,7 @@ CREATE TABLE `donatario` (
   `id_donatario` int NOT NULL,
   `ra_donatario` varchar(8) DEFAULT NULL,
   `nome_donatario` varchar(60) DEFAULT NULL,
+  `avatar` varchar(200) DEFAULT NULL,
   `email_responsavel` varchar(40) DEFAULT NULL,
   `telefone_responsavel` varchar(11) DEFAULT NULL,
   `cep` varchar(8) DEFAULT NULL,
@@ -58,8 +59,10 @@ CREATE TABLE `donatario` (
   `cidade` varchar(30) DEFAULT NULL,
   `uf` varchar(2) DEFAULT NULL,
   `escola_donatario` int DEFAULT NULL,
+  `segmento_ensino` varchar(30) DEFAULT NULL,
+  `serie_ensino` varchar(10) DEFAULT NULL,
   `tipo_doacao` varchar(30) DEFAULT NULL,
-  `lista_material` varchar(255) DEFAULT NULL,
+  `lista_material` text,
   `data_cadastro` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
