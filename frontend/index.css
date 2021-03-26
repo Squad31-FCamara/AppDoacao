@@ -98,116 +98,122 @@ button.btn-login{     /*BOTÕES CADASTRAR E LOGIN*/
 }
 .titulo-meio{
     position:absolute;
-    margin:10px;
-    margin-top: 750px;
-    left: 150px;
-	background-color: transparent;
-	opacity:none;
-    font-size: medium;
+	height:600px;
+	width:720px;  
+	margin-top:720px;			       /*eixo X */
+	margin-left:270px;			/*eixo Y */
+	text-align:center;
+    color:black;
+    font-family: 'arial', Courier, monospace;
+} 
+.imagem-meio{
+    position:absolute;
+	height:150px;
+	width:1310px;  
+	margin-top:800px;			       /*eixo X */		/*eixo Y */
+    font-family: 'arial', Courier, monospace;
 }
-.buscar-index{
-    position:absolute;
-    margin-top:10px;
-    top: 800px;
-    left: 150px;
-	background-color: transparent;
-	opacity:none;
-    font-size: medium;
+.imagem-esquerda{
+    position: absolute;
+    margin: 10px;
+    margin-left: 50px;
 }
-input[type=text]{ 
-    border-radius:4px;
-    margin:10px;
-    width: 200px;
-    height: 30px;
+.imagem-meio1{
+    position: absolute;
+    margin: 10px;
+    margin-left: 360px;
 }
-.card-esquerda {
+.imagem-meio2{
+    position: absolute;
+    margin: 10px;
+    margin-left: 680px;
+}
+.imagem-direita{
+    position: absolute;
+    margin: 10px;
+    margin-left: 980px;
+}
+.texto-duplo{
     position:absolute;
-    background-color: rgb(238, 245, 244);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-    transition: 0.3s;
-    width: 300px;
-    height: 350px;
-    border-radius: 30px;
-    margin-top:10px;
-    top: 900px;
-    left: 150px;
+	height:600px;
+	width:1310pxpx;  
+	margin-top:1050px;			       /*eixo X */			/*eixo Y */
+	text-align:center;
+    color:black;
+    font-family: 'arial', Courier, monospace;
+}
+.texto-direita{
+    height:300px;
+	width:500px; 
+    margin-left:700px;
     text-align: center;
-  }
-  
-  .card-esquerda:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
-  }
-  
-  .container {
-    padding: 2px 16px;
-  }
-  .icone img{
-      width: 110px;
-      margin-top:-30px;
-  }
-  .card-meio {
-    position:absolute;
-    background-color: rgb(238, 245, 244);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-    transition: 0.3s;
-    width: 300px;
-    height: 350px;
-    border-radius: 30px;
-    margin-top:10px;
-    top: 900px;
-    left: 500px;
+}
+.texto-esquerda{
+    position: absolute;
+    height:300px;
+	width:500px; 
+    margin-left:100px;
     text-align: center;
-  }
-  
-  .card-meio:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
-  }
-  .card-direita {
-    position:absolute;
-    background-color: rgb(238, 245, 244);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-    transition: 0.3s;
-    width: 300px;
-    height: 350px;
-    border-radius: 30px;
-    margin-top:10px;
-    top: 900px;
-    left: 850px;
+}
+.ajuda-texto{
+    position: absolute;
+    margin-top: 1300px;
+    margin-left: 400px;
+}
+.conteudo-ajuda1{
+    position: absolute;
     text-align: center;
-  }
-  
-  .card-direita:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
-  }
-.mapa{
+    margin-top: 50px;
+}
+.ajuda-estatic{
     position: absolute;
     margin-top: 1500px;
-    margin-left: 500px;
+    height:100px;
+	width:1310px;
 }
-.empresas-texto{
+.estatic1{
+    margin:10px;
     position: absolute;
-    margin-top: 1600px;
-    margin-left: 500px;
+    margin-left: 400px;
+    text-align:center;
 }
-.empresas-icones{
+.estatic2{
+    margin:10px;
     position: absolute;
-    margin: 30px;
-    margin-top: 1800px;
-    margin-left: 500px;
-
+    margin-left: 600px;
+    text-align:center;
+}
+.estatic3{
+    margin:10px;
+    position: absolute;
+    margin-left: 800px;
+    text-align:center;
 }
 .rodapé{
-    margin-top: 1950px;
+    margin-top: 1650px;
     color:white;
     position:absolute;
 	height:200px;
 	width:1310px;
 	background-color:rgb(0, 0, 0);
 }
-.nomedoprojeto{
-    font-size: x-large;
+.nomedoProjeto{
+    margin: 20px;
+    margin-top: 50px;
+    position: absolute;
 }
-.Outros{
-    margin-top: 20px;
-    margin-left: 1000px;
+.link1{
+    position:absolute;
+    margin-left: 900px ;
+    margin-top: 50px;
+}
+.link2{
+    position:absolute;
+    margin-left: 1100px ;
+    margin-top: 50px;
+}
+.link3{
+    position:absolute;
+    margin-left: 750px ;
+    margin-top: 50px;
 }
