@@ -1,0 +1,213 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+    margin:0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+.nome{  /*LOGO*/
+    position: absolute;
+    margin: 5px;
+    color: white;
+}
+button.btn-cadastro{     /*BOTÕES CADASTRAR E LOGIN*/
+    margin:30px;
+    float: right;
+    color: #FFF;
+    font-size: medium;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    height: 40px;
+    line-height: 20px;
+    padding: 0 40px;
+    font-weight: arial;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 black;
+    transition: ease-out 0.9s;
+    outline:none;
+}
+.btn-cadastro:hover{
+    box-shadow: inset 300px 0 0 0 black;
+} 
+button.btn-login{     /*BOTÕES CADASTRAR E LOGIN*/
+    margin:30px;
+    float: right;
+    color: #FFF;
+    font-size: medium;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    height: 40px;
+    line-height: 20px;
+    padding: 0 40px;
+    font-weight: arial;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 black;
+    transition: ease-out 0.9s;
+    outline:none;
+}
+.btn-login:hover{
+    box-shadow: inset 300px 0 0 0 black;
+}    
+.btn-doar{     /*BOTÃO DOAR*/
+  margin-top: 30px;
+  width: 300px;
+  height: 60px;
+  border: none;
+  color:white;
+  background-color: darkslategray;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 black;
+  transition: ease-out 0.7s;
+  font-size: 2rem;
+  outline:none;
+}
+.btn-doar:hover{
+    box-shadow: inset 300px 0 0 0 black;
+}
+.button-doar{
+    position:absolute;
+	height:60px;
+	width:200px;
+	top:200px;			       /*eixo X */
+	left:150px;			/*eixo Y */
+}
+.topo{ 
+    position:absolute;
+	height:627px;
+	width:1310px;
+	background-color:rgba(116, 110, 110, 0.39);
+	opacity:none;
+}
+.text-meio{
+    position:absolute;
+	height:300px;
+	width:500px;  
+	top:200px;			       /*eixo X */
+	left:370px;			/*eixo Y */
+	text-align: center;
+    text-transform: capitalize;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+}
+.titulo-meio{
+    position:absolute;
+    margin:10px;
+    margin-top: 750px;
+    left: 150px;
+	background-color: transparent;
+	opacity:none;
+    font-size: medium;
+}
+.buscar-index{
+    position:absolute;
+    margin-top:10px;
+    top: 800px;
+    left: 150px;
+	background-color: transparent;
+	opacity:none;
+    font-size: medium;
+}
+input[type=text]{ 
+    border-radius:4px;
+    margin:10px;
+    width: 200px;
+    height: 30px;
+}
+.card-esquerda {
+    position:absolute;
+    background-color: rgb(238, 245, 244);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+    transition: 0.3s;
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    margin-top:10px;
+    top: 900px;
+    left: 150px;
+    text-align: center;
+  }
+  
+  .card-esquerda:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  .icone img{
+      width: 110px;
+      margin-top:-30px;
+  }
+  .card-meio {
+    position:absolute;
+    background-color: rgb(238, 245, 244);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+    transition: 0.3s;
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    margin-top:10px;
+    top: 900px;
+    left: 500px;
+    text-align: center;
+  }
+  
+  .card-meio:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  }
+  .card-direita {
+    position:absolute;
+    background-color: rgb(238, 245, 244);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+    transition: 0.3s;
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    margin-top:10px;
+    top: 900px;
+    left: 850px;
+    text-align: center;
+  }
+  
+  .card-direita:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  }
+.mapa{
+    position: absolute;
+    margin-top: 1500px;
+    margin-left: 500px;
+}
+.empresas-texto{
+    position: absolute;
+    margin-top: 1600px;
+    margin-left: 500px;
+}
+.empresas-icones{
+    position: absolute;
+    margin: 30px;
+    margin-top: 1800px;
+    margin-left: 500px;
+
+}
+.rodapé{
+    margin-top: 1950px;
+    color:white;
+    position:absolute;
+	height:200px;
+	width:1310px;
+	background-color:rgb(0, 0, 0);
+}
+.nomedoprojeto{
+    font-size: x-large;
+}
+.Outros{
+    margin-top: 20px;
+    margin-left: 1000px;
+}
