@@ -10,6 +10,7 @@ body{
     color: black; 
     height: 900px;
     width: 1310px;
+    z-index: -1;
 }
 .nome{  /*LOGO*/
     position: absolute;
@@ -23,15 +24,16 @@ body{
     margin-top: 100px;
     width: 1150px;
     height: 750px;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
     z-index: -1;
-}  
+} 
 .informacao{
     position: absolute;
     width: 450px;
     height: 750px;
     text-align: center;
-    background-color: rgb(159, 163, 162);    
+    background-color: rgb(159, 163, 162);  
 }
 .topo{
     position: absolute;
@@ -53,13 +55,13 @@ body{
     height: 750px;
     margin-left: 450px;
     text-align: center;
-    background-color: rgb(255, 255, 255);     
+    background-color: rgb(255, 255, 255);   
 }
 .caixas{
     position: absolute;
     margin-top: 250px;
     text-align: justify;
-    margin-left: 150px;
+    margin-left: 600px;
 }
 input[type=text]{ 
     border-radius:4px;
@@ -67,6 +69,9 @@ input[type=text]{
     width: 300px;
     border-width: 1px;
     height: 40px;
+    z-index: 1;
+    cursor: pointer;
+    z-index: 1;
 }
 input[type=search]{ 
     border-radius:4px;
@@ -89,7 +94,8 @@ input[type=button]{
     transition: ease-out 0.9s;
     outline:none;
     cursor: pointer;
-} 
-
+} input:hover[type=button]{
+    box-shadow: inset 300px 0 0 0 black;
+}
 
   
