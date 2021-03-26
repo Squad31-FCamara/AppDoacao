@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 25/03/2021 às 12:02
+-- Tempo de geração: 26/03/2021 às 11:21
 -- Versão do servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versão do PHP: 7.4.3
 
@@ -61,6 +61,8 @@ CREATE TABLE `donatario` (
   `escola_donatario` int DEFAULT NULL,
   `segmento_ensino` varchar(30) DEFAULT NULL,
   `serie_ensino` varchar(10) DEFAULT NULL,
+  `sonho_profissao` varchar(50) DEFAULT NULL,
+  `sobre_voce` text,
   `tipo_doacao` varchar(30) DEFAULT NULL,
   `lista_material` text,
   `data_cadastro` datetime DEFAULT CURRENT_TIMESTAMP

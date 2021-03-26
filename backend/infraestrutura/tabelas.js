@@ -46,6 +46,8 @@ class Tabelas {
             escola_donatario int,
             segmento_ensino VARCHAR(30),
             serie_ensino VARCHAR(10),
+            sonho_profissao VARCHAR(50),
+            sobre_voce TEXT,
             tipo_doacao VARCHAR(30),
             lista_material TEXT,
             data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
