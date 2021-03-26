@@ -1,0 +1,1 @@
+#Primeiros esboços sem responsividade
