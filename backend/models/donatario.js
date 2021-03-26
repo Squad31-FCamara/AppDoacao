@@ -30,9 +30,7 @@ class Donatario{
 
     buscaPorIdEscola(id, res){
 
-        const sql = `SELECT d.nome_donatario, d.segmento_ensino, d.serie_ensino, d.cidade, 
-        d.uf, d.tipo_doacao, e.nome_escola 
-        FROM donatario AS d INNER JOIN escola AS e ON d.escola_donatario = e.id_escola
+        const sql = `SELECT * FROM donatario AS d INNER JOIN escola AS e ON d.escola_donatario = e.id_escola
         WHERE e.id_escola = ${id}`
 
         conexao.query(sql, (error, results) => {
