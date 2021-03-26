@@ -18,8 +18,26 @@
         </nav>
     </header>
         
-    <main class="container-fluid">
-        <p>AQUI ENTRA CONTEÚDOS</p>
+    <main class="container-fluid p-0 m-0">
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-md-5 px-4 py-5 bg-info">
+                    <h3 class="display-5">Informe sua localização para indicarmos escolas perto de você</h1>
+                    <p class="lead pt-4">Faça uma busca por CEP ou selecione diretamente seu Estado e Município</p>
+                </div>
+                <div class="col-md-7 px-4 py-5 bg-light">
+                    <form>
+                        <label for="cep">CEP:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cep" name="cep" placeholder="Apenas números" aria-label="CEP" aria-describedby="button-cep">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="submit" id="button-cep">Buscar</button>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         
         
     </main>
