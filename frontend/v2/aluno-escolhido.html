@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="aluno-escolhido.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>EducAção</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light  p-3" style="background-color: rgb(173, 173, 173);">
+            <a class="navbar-brand pl-5" href="#">
+                 <img src="" width="50" height="50" alt="Logo EducAção" style="color: white;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mx-5 px-5" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item dropdown pr-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            Cadastre-se
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou uma escola</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown pl-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            Login
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou uma escola</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col">
+                <div class="col">
+                    <button id="btn-voltar" class="btn btn-default col-3 col-sm-3 col-md-3 text-3"> ← Voltar</button>
+                </div>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-12 pl-5">
+                <div id="Perfil"> 
+                    <p id="titulo-foto"><h3>Perfil do aluno</h3></p>
+                    <div  id="icone"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pl-5">
+                <div id="escrita-1"> 
+                    <p id="escola-estat">Escola E.M.E.F. Carolina Dantas
+                                         Ensino Fundamental I, 4° ano</p>
+                    <p id="escola-id">Município: São Vicente, UF: SP</p>    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pl-5">
+                <div id="escrita-2"> 
+                    <div id="conheca"> 
+                        <p id="titulo">Conheça meu sonho:</p>
+                        <p id="sonho">“Quando eu crescer quero ser um astronauta e colocar a bandeira do Brasil na lua”</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pl-5">
+                <div id="tit-radio"> 
+                    <p id="titulo-radio">Aceitando doações de:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pl-5">
+                <div id="btn-radio"> 
+                    <input type="radio" name="materiais" value="material-escolar" style="margin: 0 30px;"> Material Escolar <input type="radio" name="materiais" value="uniforme-escolar" style="margin: 0 30px;"> Uniforme Escolar <input type="radio" name="materiais" value="eletronicos" style="margin: 0 30px;"> Eletronicos     
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="lista-2" class="col-12 pl-5">
+                    <p id="tit-lista">Lista de Material:</p>
+                    <p id="desc-lista">Selecione os itens que você que gostaria de doar</p>
+                    <div id="esquerda" class="col-6 pl-5">
+                        <p><input type="checkbox" value=""> 2 cadernos de linha capadura (96 folhas)</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 4 cadernos de linha capa dura (48 folhas)</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 1 caderno de caligrafia</p>
+                        <br> 
+                        <p><input type="checkbox" value=""> 1 tesoura sem ponta</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 1 régua 30cm</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 2 cadernos de linhas capa dura (96 folhas)</p> 
+                    </div>
+                    <div id="direita" class="col-6 pl-5">
+                        <p><input type="checkbox" value=""> 2 cadernos de linha capadura (96 folhas)</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 4 cadernos de linha capa dura (48 folhas)</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 1 caderno de caligrafia</p>
+                        <br> 
+                        <p><input type="checkbox" value=""> 1 tesoura sem ponta</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 1 régua 30cm</p> 
+                        <br>
+                        <p><input type="checkbox" value=""> 2 cadernos de linhas capa dura (96 folhas)</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="titulo-btn-agendar">Ja tenho tudo em mãos</p>
+        <p id="titulo-btn-compra">Não tenho em mãos</p>
+        <button id="btn-agendar" class="btn btn-default col-3 col-sm-3 col-md-2 text-4">Agendar entrega na escola</button>
+        <button id="btn-compra" class="btn btn-default col-3 col-sm-3 col-md-2 text-3">Comprar Online</button>
+    </footer>
