@@ -40,6 +40,7 @@ class Donatario{
                 res.status(400).json(error)
             } else {
                 res.status(200).json(donatarios)
+                //res.render('cards_alunos.html', {donatarios: donatarios} )
             }
         })
     }
