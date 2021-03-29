@@ -26,3 +26,4 @@ function preencherCampos(data) {
     cidade.value = data.localidade;
     estado.value = data.uf;
 }
+

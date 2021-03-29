@@ -1,15 +1,17 @@
 const express = require('express')
 const consign = require('consign')
-const bodyParser = require('body-parser')
+const cors = require('cors')
 
 module.exports = () => {
     const app = express()
 
-    app.use(bodyParser.urlencoded({extended: true}))
-    app.use(bodyParser.json())
+    app.use(cors())
+    app.use(express.urlencoded())
+    app.use(express.json())
 
     app.set('view engine', 'ejs');
-    app.set('views', '../../frontend/');
+    app.set('views', '../frontend/v2');
+    app.engine('html', require('ejs').renderFile)
 
 
     consign() //irá agrupar todas as rotas criadas dentro do app
