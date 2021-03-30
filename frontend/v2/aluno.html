@@ -19,9 +19,76 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
-        <p>AQUI ENTRA CONTEÚDOS</p>
-        
-        
+        <div class="container my-5" id="dados-aluno">
+
+            <div class="row">
+                <a type="button" href="./cards_alunos.html" class="btn btn-primary">&larr; Anterior</a>
+            </div>   
+            
+            
+
+            <div class="row py-3">
+                <div class="col col-sm-3">
+                    <img src="" class="img-fluid" id="avatar-aluno" alt="Avatar aluno responsiva">
+                </div>
+                <div class="col col-sm-9">
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="nome-aluno"></h5>
+                                <h5 class="card-title" id="nivel-aluno"></h5>
+                                <p class="card-text" id="registro-aluno"></p>
+                                <p class="card-text" id="localidade-aluno"></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="title-sonho">Meu sonho é:</h5>
+                                <p class="card-text" id="sonho-aluno"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="card my-3 mx-auto" style="width: 100%;">
+                            <p class="p-3 mb-0 text-center"><em id="sobre-aluno"></em></p>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <h5 class="p-3"><em>Aceitando doações de:</em></h5>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <form action="">
+                <h2>Lista de Material</h2>
+                <p><em>Selecione os itens que você gostaria de doar</em></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="kit">
+                    <label class="form-check-label" for="kit">
+                        exemplo
+                    </label>
+                </div>
+                <div class="row my-3" id="botoes-doar" >
+                    <div class="col-lg-6 text-center">
+                        <p class="m-0 p-0 pt-3"><em>Tenho os itens em mãos</em></p>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Entregar os itens diretamente na escola escolhida">
+                            <a href="">Agendar entrega na escola</a>
+                        </button>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <p class="m-0 p-0 pt-3"><em>Não tenho os itens em mãos</em></p>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras e enviar para o endereço da escola com nome e registro do aluno">
+                            <a href="">Realizar compra online</a>
+                        </button>
+                    </div>
+                    
+                </div>
+            </form>
+
+        </div>
+               
     </main>
 
     <footer class="container-fluid bg-dark p-5">
@@ -55,7 +122,9 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
+    <script src="./aluno-escolhido.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
