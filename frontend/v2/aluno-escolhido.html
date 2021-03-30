@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light  p-3" style="background-color: rgb(173, 173, 173);">
             <a class="navbar-brand pl-5" href="#">
-                 <img src="" width="50" height="50" alt="Logo EducAção" style="color: white;">
+                 <img id="lg-log"   src="" width="50" height="50" alt="Logo EducAção" style="color: white;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,7 @@
                 <div id="lista-2" class="col-12 pl-5">
                     <p id="tit-lista">Lista de Material:</p>
                     <p id="desc-lista">Selecione os itens que você que gostaria de doar</p>
-                    <div id="esquerda" class="col-6 pl-5">
+                    <div id="esquerda" class="col-6  pl-sm-16">
                         <p><input type="checkbox" value=""> 2 cadernos de linha capadura (96 folhas)</p> 
                         <br>
                         <p><input type="checkbox" value=""> 4 cadernos de linha capa dura (48 folhas)</p> 
@@ -111,7 +111,7 @@
                         <br>
                         <p><input type="checkbox" value=""> 2 cadernos de linhas capa dura (96 folhas)</p> 
                     </div>
-                    <div id="direita" class="col-6 pl-5">
+                    <div id="direita" class="col-6 pl-sm-12">
                         <p><input type="checkbox" value=""> 2 cadernos de linha capadura (96 folhas)</p> 
                         <br>
                         <p><input type="checkbox" value=""> 4 cadernos de linha capa dura (48 folhas)</p> 
@@ -131,6 +131,27 @@
     <footer>
         <p id="titulo-btn-agendar">Ja tenho tudo em mãos</p>
         <p id="titulo-btn-compra">Não tenho em mãos</p>
-        <button id="btn-agendar" class="btn btn-default col-3 col-sm-3 col-md-2 text-4">Agendar entrega na escola</button>
+        <button id="btn-agendar" class="btn btn-default col-5 col-sm-3 col-md-2 text-3" data-toggle="modal" data-target="#exampleModal">Agendar entrega na escola</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agendar a entrega de doação</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <button id="btn-compra" class="btn btn-default col-3 col-sm-3 col-md-2 text-3">Comprar Online</button>
     </footer>
+</body>
+</html> 
