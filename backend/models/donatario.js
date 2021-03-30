@@ -49,7 +49,7 @@ class Donatario{
         const sql = `SELECT * FROM donatario WHERE id_donatario = ${id}`
 
         conexao.query(sql, (error, results) => {
-            const donatario = results[0]
+            const donatario = results
 
             if(error){
                 res.status(400).json(error)
