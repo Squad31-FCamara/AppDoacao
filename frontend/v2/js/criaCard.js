@@ -6,7 +6,7 @@ export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf,
 
     card.innerHTML = `
     <img class="" src="../imgs/${imagem}" width="130" height="130" alt="Avatar do aluno">
-    <div class="card-body text-center">
+    <div class="card-body">
         <h5 class="card-title">${nome_escola} - ${nivel}, ${ano}</h5>
         <p class="card-text">${municipio}, ${uf}</p>
         <p class="card-text font-italic">${sonho}</p>
