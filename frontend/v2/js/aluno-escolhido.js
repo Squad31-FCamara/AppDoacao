@@ -14,8 +14,11 @@ async function dadosAluno() {
         const avatarAluno = document.querySelector("#avatar-aluno")
         avatarAluno.innerHTML = `<img src="../imgs/${resultado.avatar}" class="rounded-circle"  alt="Avatar aluno responsiva">`
 
+        const escolaAluno = document.querySelector("#escola-aluno")
+        escolaAluno.innerHTML = `${resultado.nome_escola}`
+        
         const nivelAluno = document.querySelector("#nivel-aluno")
-        nivelAluno.innerHTML = `${resultado.segmento_ensino}, ${resultado.serie_ensino} `
+        nivelAluno.innerHTML = `${resultado.segmento_ensino}, ${resultado.serie_ensino} ano`
 
         const localidadeAluno = document.querySelector("#localidade-aluno")
         localidadeAluno.innerHTML = `Município: ${resultado.cidade}, UF: ${resultado.uf} `
