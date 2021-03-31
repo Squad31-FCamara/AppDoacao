@@ -5,8 +5,7 @@ class Tabelas {
         this.criarDonatario()
         this.criarDoador()
         this.criarKit()
-        this.criarListaMaterial()
-        this.criarRelacaoKitLista()
+        this.criarRelacaoKitUsuario()
         this.criarFaleConosco()
     }
 
@@ -92,7 +91,6 @@ class Tabelas {
             id_kit int NOT NULL AUTO_INCREMENT,
             nome VARCHAR(20),
             elementos TEXT,
-            tipo_kit VARCHAR(20),
             PRIMARY KEY (id_kit))`
         
         this.conexao.query(sql,(error) => {
@@ -104,39 +102,21 @@ class Tabelas {
         })
     }
 
-    criarListaMaterial(){
-        const sql = `CREATE TABLE IF NOT EXISTS lista_material(
-            id_lista int NOT NULL AUTO_INCREMENT,
-            id_donatario int,
-            data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
-            PRIMARY KEY (id_lista),
-            FOREIGN KEY (id_donatario) REFERENCES donatario(id_donatario))`
-        
-        this.conexao.query(sql,(error) => {
-            if(error){
-                console.log(error)
-            }else{ 
-                console.log('Tabela lista_material criada com sucesso!')
-            }
-        })
-    }
-
-    
-    criarRelacaoKitLista(){
-        const sql = `CREATE TABLE IF NOT EXISTS relacao_kit_lista(
+    criarRelacaoKitUsuario(){
+        const sql = `CREATE TABLE IF NOT EXISTS relacao_kit_donatario(
             id int NOT NULL AUTO_INCREMENT,
-            id_lista_material int,
+            id_donatario int,
             id_kit int,
-            status_item VARCHAR(20),
+            status_item VARCHAR(20) NULL DEFAULT 'Pendente',
             PRIMARY KEY (id),
-            FOREIGN KEY (id_lista_material) REFERENCES lista_material(id_lista),
+            FOREIGN KEY (id_donatario) REFERENCES donatario(id_donatario),
             FOREIGN KEY (id_kit) REFERENCES kit(id_kit))`
         
         this.conexao.query(sql,(error) => {
             if(error){
                 console.log(error)
             }else{ 
-                console.log('Tabela relacao_kit_lista criada com sucesso!')
+                console.log('Tabela relacao_kit_donatario criada com sucesso!')
             }
         })
     }
