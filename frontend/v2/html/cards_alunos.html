@@ -31,7 +31,7 @@
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -40,7 +40,7 @@
                             Login
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -50,22 +50,17 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
-        <div class="container my-4">
-            <div class="row">
-                <div class="col col-md-2 text-center">
-                    <a type="button" href="./escola.html" class="btn btn-primary">&larr; Anterior</a>
-                </div>
-                <div class="col col-md-8 text-center">
-                    <h2>Prontinho! Selecione o que doar e encontre uma criança</h2>
-                    <p class="py-4">Você pode selecionar um ou mais tipos de doação. Assim, você consegue, de várias formas
-                        dar à uma criança a oportunidade de ter a vida que ela merece.
-                    </p>
-                </div>
-            </div>    
+
+        <div class="container my-3 px-5">
+            <div class="row justify-content-sm-center">
+                <h3 class="display-5">Selecione a criança para quem deseja fazer a doação</h3>
+                <p class="pt-2">Utilize o filtro de objetos de doação de acordo com o que pretende doar</p>
+            </div>
         </div>
+
         <div class="container my-3">
             <div class="row mx-auto">
-                <p>Objetos de doação:&nbsp;&nbsp;</p>
+        
                 <form class="mx-auto">
                     <div class="form-check form-check-inline px-3">
                         <input class="form-check-input" type="checkbox" id="tipo_doacao" name="tipo_doacao" value="material escolar">
@@ -83,16 +78,21 @@
             </div>
         </div>
 
-        <div class="container mb-5">
+        <div class="container my-5">
             <div class="card-deck">
 
             </div>
         </div>
 
+        <div class="container my-4">
+            <div class="text-center">
+                <a type="button" href="./escola.html" class="btn btn-primary">&larr; Anterior</a>
+            </div> 
+        </div>
             
     </main>
 
-    <footer class="container-fluid bg-dark p-5">
+<!--     <footer class="container-fluid bg-dark p-5">
         <div class="row">
             <div class="col">
                 <p>      
@@ -123,7 +123,7 @@
             </div>
           </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     

@@ -31,7 +31,7 @@
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -40,7 +40,7 @@
                             Login
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -110,33 +110,40 @@
 
                         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="modalLabel">Agendar a entrega de doação</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Agendar a entrega de doação</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>De acordo com a sua disponibilidade, data e hora para entrega dos itens de doação.</p>
+                                        <form id="formAgendar">
+                                            <div class="form-group">
+                                                <label for="data">Data:</label>
+                                                <input type="date" id="data" nome="data" placeholder="00/00/0000"> 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hora">Hora:</label>
+                                                <input type="time" id="hora" nome="hora" placeholder="10:00">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">E-mail:</label>
+                                                <input type="text" id="email" nome="email" placeholder="email@email.com">
+                                            </div>
+                                        </form>
+                                        <p>
+                                            Obrigado por chegar até aqui,ficaremos aguardando a entrega
+                                            da sua doação.Para ajudá-lo(a) enviaremos os itens da doação
+                                            para o seu e-mail bem como a localização da escola.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Agendar</button>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p style="font-size: small; color:grey;font-style: oblique;">De acordo com a sua diponibilidade, data e hora para
-                                        entrega dos itens de doação.
-                                    </p>
-                                    <form id="form1">
-                                         <p>Data:</p>
-                                        <input type="date" placeholder="00/00/0000" style="border: 1px solid grey; border-radius: 4px;"> 
-                                        <p>Hora:</p>
-                                        <input type="time" placeholder="10:00>" style="border: 1px solid grey; border-radius: 4px;  ">
-                                        <p>E-mail:</p>
-                                        <input type="text" style="border: 1px solid grey; border-radius: 4px;  ">
-                                     </form>
-                                     <p style="font-size: small; color:grey; font-style: oblique;">Obrigado por chegar até aqui,ficaremos aguardando a entrega
-                                        da sua doação.Para ajudá-lo(a) enviaremos os itens da doação
-                                        para o seu e-mail bem como a localização da escola.</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn col-12 btn-primary" style="background-color: darkgrey;">Enviar</button>
-                                </div>
-                              </div>
                             </div>
                         </div>
                         
@@ -144,7 +151,7 @@
 
                     <div class="col-lg-6 text-center">
                         <p class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras e enviar para o endereço da escola com nome e registro do aluno"><em>Não tenho os itens em mãos</em></p>
-                        <button type="button" class="btn btn-success" >
+                        <button type="button" class="btn btn-success" disabled>
                             Realizar compra online
                         </button>
                     </div>
@@ -156,7 +163,7 @@
                
     </main>
 
-    <footer class="container-fluid bg-dark p-5">
+<!--     <footer class="container-fluid bg-dark p-5">
         <div class="row">
             <div class="col">
                 <p>      
@@ -187,7 +194,7 @@
             </div>
           </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 

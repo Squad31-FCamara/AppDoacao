@@ -31,7 +31,7 @@
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -40,7 +40,7 @@
                             Login
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sou um aluno</a>
+                            <a class="dropdown-item disabled" href="#">Sou um aluno</a>
                             <a class="dropdown-item disabled" href="#">Sou uma escola</a>
                         </div>
                     </li>
@@ -50,16 +50,18 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
-        <div class="container my-3">
-            <div class="row">
-                <div class="col-md-5 px-4 py-5 bg-info">
-                    <h3 class="display-5">Informe sua localização para indicarmos escolas perto de você</h1>
-                    <p class="pt-4">Digite seu CEP ou selecione diretamente seu Estado e Município</p>
-                </div>
-                <div class="col-md-7 px-4 py-5 bg-light">
-                    <form class="col-lg-8 mx-auto">
+        <div class="container my-3 px-5">
+            
+            <div class="row justify-content-sm-center">
+                <h3 class="display-5">Informe sua localização para indicarmos escolas perto de você</h3>
+                <p class="pt-2">As escolas são os pontos de coleta das doações do projeto</p>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col col-md-7">
+                    <form class="my-3">
                         <div class="form-group">
-                            <label for="uf">Estado:</label>
+                            <label for="uf">UF:</label>
                             <select class="form-control" id="uf" name="uf">
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
@@ -92,7 +94,7 @@
                             </select>
                         </div>
                         <div class="form-group" >
-                            <label for="cidade">Cidade:</label>
+                            <label for="cidade">Município:</label>
                             <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Rio de Janeiro">
                         </div>
                         <div class="text-center">
@@ -100,26 +102,25 @@
                         </div>
                 
                     </form>
-
-                    <form class="col-lg-8 mx-auto my-5" action='./cards_alunos.html'>
+    
+                    <form action='./cards_alunos.html' class="my-3">
                         <div id="form-escolas">
-
+    
                         </div>
-
+    
                         <div class="text-center">
-                            <a type="button" href="./index.html" class="btn btn-primary">&larr; Anterior</a>
-                            <button class="btn btn-primary" type="submit" id="busca-alunos">Próximo 	&rarr;</button>
+                            <a type="button" href="./index.html" class="btn btn-primary">Cancelar</a>
+                            <button class="btn btn-primary" type="submit" id="busca-alunos">Continuar</button>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
 
-       
+        </div>
         
     </main>
 
-    <footer class="container-fluid bg-dark p-5">
+<!--     <footer class="container-fluid bg-dark p-5">
         <div class="row">
             <div class="col">
                 <p>      
@@ -150,7 +151,7 @@
             </div>
           </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     
