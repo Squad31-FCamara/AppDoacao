@@ -50,6 +50,7 @@ class Tabelas {
             escola_donatario int,
             segmento_ensino VARCHAR(30),
             serie_ensino VARCHAR(10),
+            tipo_doacao VARCHAR(30),
             sonho_profissao TEXT,
             data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (id_donatario),

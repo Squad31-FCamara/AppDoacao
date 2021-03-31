@@ -10,7 +10,7 @@ async function getAlunosPorEscola() {
     console.log(resultado)
 
 
-    resultado.map(aluno => criaCard(aluno.avatar, aluno.nome_escola, aluno.segmento_ensino, aluno.serie_ensino, aluno.cidade, aluno.uf, aluno.sonho_profissao, aluno.id_donatario)) 
+    resultado.map(aluno => criaCard(aluno.tipo_doacao, aluno.avatar, aluno.nome_escola, aluno.segmento_ensino, aluno.serie_ensino, aluno.cidade, aluno.uf, aluno.sonho_profissao, aluno.id_donatario)) 
 
 
     const buttonsAluno = document.querySelectorAll(".button-aluno")

@@ -27,8 +27,6 @@ async function dadosAluno() {
         const sonhoAluno = document.querySelector("#sonho-aluno")
         sonhoAluno.innerHTML = resultado.sonho_profissao
 
-        const sobreAluno = document.querySelector("#sobre-aluno")
-        sobreAluno.innerHTML = `"${resultado.sobre_voce}"`
     }
 
     renderDadosAluno(resultado[0])
