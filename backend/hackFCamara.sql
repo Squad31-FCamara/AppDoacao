@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 26/03/2021 às 11:21
+-- Tempo de geração: 31/03/2021 às 12:05
 -- Versão do servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versão do PHP: 7.4.3
 
@@ -61,10 +61,7 @@ CREATE TABLE `donatario` (
   `escola_donatario` int DEFAULT NULL,
   `segmento_ensino` varchar(30) DEFAULT NULL,
   `serie_ensino` varchar(10) DEFAULT NULL,
-  `sonho_profissao` varchar(50) DEFAULT NULL,
-  `sobre_voce` text,
-  `tipo_doacao` varchar(30) DEFAULT NULL,
-  `lista_material` text,
+  `sonho_profissao` text,
   `data_cadastro` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -85,6 +82,58 @@ CREATE TABLE `escola` (
   `cidade` varchar(30) DEFAULT NULL,
   `uf` varchar(2) DEFAULT NULL,
   `data_cadastro` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `fale_conosco`
+--
+
+CREATE TABLE `fale_conosco` (
+  `id` int NOT NULL,
+  `nome` varchar(50) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `assunto` varchar(30) DEFAULT NULL,
+  `mensagem` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `kit`
+--
+
+CREATE TABLE `kit` (
+  `id_kit` int NOT NULL,
+  `nome` varchar(20) DEFAULT NULL,
+  `elementos` text,
+  `tipo_kit` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `lista_material`
+--
+
+CREATE TABLE `lista_material` (
+  `id_lista` int NOT NULL,
+  `id_donatario` int DEFAULT NULL,
+  `data_criacao` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `relacao_kit_lista`
+--
+
+CREATE TABLE `relacao_kit_lista` (
+  `id` int NOT NULL,
+  `id_lista_material` int DEFAULT NULL,
+  `id_kit` int DEFAULT NULL,
+  `status_item` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -112,6 +161,33 @@ ALTER TABLE `escola`
   ADD PRIMARY KEY (`id_escola`);
 
 --
+-- Índices de tabela `fale_conosco`
+--
+ALTER TABLE `fale_conosco`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `kit`
+--
+ALTER TABLE `kit`
+  ADD PRIMARY KEY (`id_kit`);
+
+--
+-- Índices de tabela `lista_material`
+--
+ALTER TABLE `lista_material`
+  ADD PRIMARY KEY (`id_lista`),
+  ADD KEY `id_donatario` (`id_donatario`);
+
+--
+-- Índices de tabela `relacao_kit_lista`
+--
+ALTER TABLE `relacao_kit_lista`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_lista_material` (`id_lista_material`),
+  ADD KEY `id_kit` (`id_kit`);
+
+--
 -- AUTO_INCREMENT de tabelas apagadas
 --
 
@@ -134,6 +210,30 @@ ALTER TABLE `escola`
   MODIFY `id_escola` int NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de tabela `fale_conosco`
+--
+ALTER TABLE `fale_conosco`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `kit`
+--
+ALTER TABLE `kit`
+  MODIFY `id_kit` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `lista_material`
+--
+ALTER TABLE `lista_material`
+  MODIFY `id_lista` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `relacao_kit_lista`
+--
+ALTER TABLE `relacao_kit_lista`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
 -- Restrições para dumps de tabelas
 --
 
@@ -148,6 +248,19 @@ ALTER TABLE `doador`
 --
 ALTER TABLE `donatario`
   ADD CONSTRAINT `donatario_ibfk_1` FOREIGN KEY (`escola_donatario`) REFERENCES `escola` (`id_escola`);
+
+--
+-- Restrições para tabelas `lista_material`
+--
+ALTER TABLE `lista_material`
+  ADD CONSTRAINT `lista_material_ibfk_1` FOREIGN KEY (`id_donatario`) REFERENCES `donatario` (`id_donatario`);
+
+--
+-- Restrições para tabelas `relacao_kit_lista`
+--
+ALTER TABLE `relacao_kit_lista`
+  ADD CONSTRAINT `relacao_kit_lista_ibfk_1` FOREIGN KEY (`id_lista_material`) REFERENCES `lista_material` (`id_lista`),
+  ADD CONSTRAINT `relacao_kit_lista_ibfk_2` FOREIGN KEY (`id_kit`) REFERENCES `kit` (`id_kit`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
