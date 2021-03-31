@@ -1,14 +1,13 @@
-export default function criaCard(imagem, nome, nivel, ano, municipio, uf, sonho, doacao, id) {
-    const conjCard = document.querySelector('.card-deck')
+export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf, sonho, id) {
+    const conjCard = document.querySelector('.card-columns')
     
     const card = document.createElement('div')
-    card.setAttribute('class', 'card')
-    card.setAttribute('id', `${doacao}`)
+    card.setAttribute('class', 'card text-center')
 
     card.innerHTML = `
-    <img class="card-img-top" src="" alt="Avatar do aluno">
+    <img class="" src="../imgs/${imagem}" width="130" height="130" alt="Avatar do aluno">
     <div class="card-body text-center">
-        <h5 class="card-title">${nome} - ${nivel}, ${ano}</h5>
+        <h5 class="card-title">${nome_escola} - ${nivel}, ${ano}</h5>
         <p class="card-text">${municipio}, ${uf}</p>
         <p class="card-text font-italic">${sonho}</p>
         <button class="btn btn-secondary button-aluno" id=${id} type="submit"><a href="./aluno.html">Quero doar!<a></button>
