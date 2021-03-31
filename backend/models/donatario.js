@@ -60,7 +60,7 @@ class Donatario{
     }
 
     buscaLista(id, res){
-        const sql = `SELECT kit.nome, kit.itens, kitsPedido.id, kitsPedido.status_item FROM donatario 
+        const sql = `SELECT kit.nome, kit.itens, kitsPedido.id, kitsPedido.status_item, lista.tipo FROM donatario 
         INNER JOIN lista ON donatario.id_donatario = lista.id_donatario
         INNER JOIN kitsPedido ON kitsPedido.id_lista = lista.id_lista
         INNER JOIN kit ON kit.id_kit = kitsPedido.id_kit

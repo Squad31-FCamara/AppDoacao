@@ -38,8 +38,6 @@ async function listaAluno() {
     console.log(resultado)
 
     resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
-
-
 }
 
 dadosAluno()
