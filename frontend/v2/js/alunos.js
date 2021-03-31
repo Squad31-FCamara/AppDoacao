@@ -1,4 +1,5 @@
 import criaCard from './criaCard.js'
+import criaElemento from './escola-sem-alunos.js'
 
 async function getAlunosPorEscola() {
     
@@ -6,9 +7,13 @@ async function getAlunosPorEscola() {
 
     const resposta = await axios.get(`http://localhost:3333/donatarios/escola/${id}`)
     const resultado = await resposta.data
+    console.log(resultado)
 
-    resultado.map(aluno => criaCard(aluno.avatar, aluno.nome_donatario, aluno.segmento_ensino, aluno.serie_ensino, aluno.cidade, aluno.uf, aluno.sonho_profissao, aluno.tipo_doacao, aluno.id_donatario)) 
-
+    if(resultado.lenght>0){
+        resultado.map(aluno => criaCard(aluno.avatar, aluno.nome_donatario, aluno.segmento_ensino, aluno.serie_ensino, aluno.cidade, aluno.uf, aluno.sonho_profissao, aluno.tipo_doacao, aluno.id_donatario)) 
+    } else {
+        criaElemento()
+    }
 
     const buttonsAluno = document.querySelectorAll(".button-aluno")
 

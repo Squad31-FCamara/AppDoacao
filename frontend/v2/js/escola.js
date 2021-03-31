@@ -30,16 +30,9 @@ function getEscolas(){
                 const labelEscola = document.createElement('label')
                 labelEscola.setAttribute("class", "form-check-label")
                 labelEscola.setAttribute("for", `id_escola` )
-                labelEscola.innerHTML = `
-                <div class="row">
-                    <div class="col">
-                        ${escola.nome_escola}
-                    </div>
-                    <div class="col">
-                        ${escola.logradouro}, ${escola.complemento} - ${escola.bairro}
-                    </div>
-                </div> 
-                `
+                labelEscola.innerHTML = `${escola.nome_escola} <br> 
+                Rede ${escola.rede} <br> 
+                Endereço: ${escola.logradouro}, ${escola.complemento} - ${escola.bairro}`
 
                 const groupEscolas = document.createElement('div')
                 groupEscolas.setAttribute("class", "form-group py-3")
