@@ -27,4 +27,11 @@ module.exports = app => {
 
         Donatario.buscaPorId(id, res)
     })
+
+    app.get('/donatarios/:id/lista', (req, res) => {
+
+        const id = parseInt(req.params.id)
+
+        Donatario.buscaLista(id, res)
+    })
 }

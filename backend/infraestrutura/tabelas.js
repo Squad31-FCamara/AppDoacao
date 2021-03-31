@@ -5,7 +5,8 @@ class Tabelas {
         this.criarDonatario()
         this.criarDoador()
         this.criarKit()
-        this.criarRelacaoKitUsuario()
+        this.criarLista()
+        this.criarKitsLista()
         this.criarFaleConosco()
     }
 
@@ -49,7 +50,6 @@ class Tabelas {
             escola_donatario int,
             segmento_ensino VARCHAR(30),
             serie_ensino VARCHAR(10),
-            tipo_doacao VARCHAR(30),
             sonho_profissao TEXT,
             data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (id_donatario),
@@ -90,9 +90,8 @@ class Tabelas {
         const sql = `CREATE TABLE IF NOT EXISTS kit(
             id_kit int NOT NULL AUTO_INCREMENT,
             nome VARCHAR(20),
-            elementos TEXT,
+            itens TEXT,
             PRIMARY KEY (id_kit))`
-        
         this.conexao.query(sql,(error) => {
             if(error){
                 console.log(error)
@@ -102,21 +101,37 @@ class Tabelas {
         })
     }
 
-    criarRelacaoKitUsuario(){
-        const sql = `CREATE TABLE IF NOT EXISTS relacao_kit_donatario(
-            id int NOT NULL AUTO_INCREMENT,
+    criarLista(){
+        const sql = `CREATE TABLE IF NOT EXISTS lista(
+            id_lista int NOT NULL AUTO_INCREMENT,
             id_donatario int,
+            tipo VARCHAR(20),
+            PRIMARY KEY (id_lista),
+            FOREIGN KEY (id_donatario) REFERENCES donatario(id_donatario))`
+        this.conexao.query(sql,(error) => {
+            if(error){
+                console.log(error)
+            }else{ 
+                console.log('Tabela lista criada com sucesso!')
+            }
+        })
+    }
+
+    criarKitsLista(){
+        const sql = `CREATE TABLE IF NOT EXISTS kitsPedido(
+            id int NOT NULL AUTO_INCREMENT,
             id_kit int,
+            id_lista int,
             status_item VARCHAR(20) NULL DEFAULT 'Pendente',
             PRIMARY KEY (id),
-            FOREIGN KEY (id_donatario) REFERENCES donatario(id_donatario),
+            FOREIGN KEY (id_lista) REFERENCES lista(id_lista),
             FOREIGN KEY (id_kit) REFERENCES kit(id_kit))`
         
         this.conexao.query(sql,(error) => {
             if(error){
                 console.log(error)
             }else{ 
-                console.log('Tabela relacao_kit_donatario criada com sucesso!')
+                console.log('Tabela kitsPedido criada com sucesso!')
             }
         })
     }

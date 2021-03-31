@@ -1,3 +1,5 @@
+import criaLista from './criaLista.js'
+
 async function dadosAluno() {
 
     const id = sessionStorage.getItem("id")
@@ -10,13 +12,7 @@ async function dadosAluno() {
 
     function renderDadosAluno(resultado) {
         const avatarAluno = document.querySelector("#avatar-aluno")
-        avatarAluno.innerHTML = resultado.avatar
-
-        const nomeAluno = document.querySelector("#nome-aluno")
-        nomeAluno.innerHTML = resultado.nome_donatario
-
-        const registroAluno = document.querySelector("#registro-aluno")
-        registroAluno.innerHTML =`N° do registro do aluno (RA): ${resultado.ra_donatario}`
+        avatarAluno.innerHTML = `<img src="../imgs/${resultado.avatar}" class="rounded-circle"  alt="Avatar aluno responsiva">`
 
         const nivelAluno = document.querySelector("#nivel-aluno")
         nivelAluno.innerHTML = `${resultado.segmento_ensino}, ${resultado.serie_ensino} `
@@ -26,10 +22,25 @@ async function dadosAluno() {
 
         const sonhoAluno = document.querySelector("#sonho-aluno")
         sonhoAluno.innerHTML = resultado.sonho_profissao
-
     }
 
     renderDadosAluno(resultado[0])
 }
 
+async function listaAluno() {
+
+    const id = sessionStorage.getItem("id")
+    console.log(id)
+
+    const resposta = await axios.get(`http://localhost:3333/donatarios/${id}/lista`)
+    const resultado = await resposta.data
+
+    console.log(resultado)
+
+    resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
+
+
+}
+
 dadosAluno()
+listaAluno()

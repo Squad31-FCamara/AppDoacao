@@ -66,16 +66,12 @@
             
             
             <div class="row py-3">
-                <div class="col col-sm-3">
-                    <img src="" class="rounded-circle" id="avatar-aluno" alt="Avatar aluno responsiva">
-                </div>
+                <div class="col col-sm-3" id="avatar-aluno"></div>
                 <div class="col col-sm-9">
                     <div class="card-deck">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="nome-aluno"></h5>
                                 <h5 class="card-title" id="nivel-aluno"></h5>
-                                <p class="card-text" id="registro-aluno"></p>
                                 <p class="card-text" id="localidade-aluno"></p>
                             </div>
                         </div>
@@ -94,14 +90,11 @@
                 </div>
             </div>
 
-            <form action="">
+            <form class="" action="">
                 <h2>Lista de Material</h2>
                 <p><em>Selecione os itens que você gostaria de doar</em></p>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="kit">
-                    <label class="form-check-label" for="kit">
-                        exemplo
-                    </label>
+                <div class="form-lista">
+                    
                 </div>
                 <div class="row my-3" id="botoes-doar">
 
@@ -125,15 +118,15 @@
                                         <form id="formAgendar">
                                             <div class="form-group">
                                                 <label for="data">Data:</label>
-                                                <input type="date" id="data" nome="data" placeholder="00/00/0000"> 
+                                                <input type="date" id="data" nome="data" placeholder="00/00/0000" required> 
                                             </div>
                                             <div class="form-group">
                                                 <label for="hora">Hora:</label>
-                                                <input type="time" id="hora" nome="hora" placeholder="10:00">
+                                                <input type="time" id="hora" nome="hora" placeholder="10:00" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">E-mail:</label>
-                                                <input type="text" id="email" nome="email" placeholder="email@email.com">
+                                                <input type="text" id="email" nome="email" placeholder="email@email.com" required>
                                             </div>
                                         </form>
                                         <p>
@@ -144,7 +137,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Agendar</button>
+                                        <button type="submit" class="btn btn-primary">Agendar</button>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +146,7 @@
                     </div>
 
                     <div class="col-lg-6 text-center">
-                        <p class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras e enviar para o endereço da escola com nome e registro do aluno"><em>Não tenho os itens em mãos</em></p>
+                        <p class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras"><em>Não tenho os itens em mãos</em></p>
                         <button type="button" class="btn btn-success" disabled>
                             Realizar compra online
                         </button>
@@ -201,7 +194,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
-    <script src="../js/aluno-escolhido.js"></script>
+    <script type="module" src="../js/aluno-escolhido.js"></script>
+    <script type="module" src="../js/criaLista.js"></script>
 
 
 

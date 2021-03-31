@@ -58,6 +58,24 @@ class Donatario{
             }
         })
     }
+
+    buscaLista(id, res){
+        const sql = `SELECT kit.nome, kit.itens, kitsPedido.id, kitsPedido.status_item FROM donatario 
+        INNER JOIN lista ON donatario.id_donatario = lista.id_donatario
+        INNER JOIN kitsPedido ON kitsPedido.id_lista = lista.id_lista
+        INNER JOIN kit ON kit.id_kit = kitsPedido.id_kit
+        WHERE donatario.id_donatario = ${id}`
+
+        conexao.query(sql, (error, results) => {
+            const lista = results
+
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(200).json(lista)
+            }
+        })
+    }
 }
 
 module.exports = new Donatario
