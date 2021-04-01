@@ -120,3 +120,15 @@ input{
     font-family: Poppins;
     color: white;
 }
+
+.row-cards{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.cartao-kits{
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}

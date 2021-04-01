@@ -137,11 +137,11 @@ CREATE TABLE `kit` (
 --
 
 INSERT INTO `kit` (`id_kit`, `nome`, `itens`) VALUES
-(1, 'Kit 1', '1 estojo, 5 lápis pretos, 2 borrachas, 2 apontadores, 1 cola bastão, 2 canetas vermelhas e 2 azuis'),
-(2, 'Kit 2', '1 conjunto de canetinhas , 1 cx. de lápis de cor, 1cx. de giz de cera, 1 tesoura sem ponta'),
-(3, 'Kit 3', '1 caderno de desenho grande, 4 cadernos espiral capa dura de 100 folhas, 1 caderno quadriculado grande'),
-(4, 'Kit 4', '1 mochila, 1 lancheira, 1 garrafinha, 1 pote pequeno de plástico, 1 toalhinha de mão'),
-(5, 'Kit 5', '1 par de esquadros, 2 réguas de 30 cm, 1 compasso, 500 folhas de papel sulfite A4');
+(1, 'Kit estojo', '1 estojo, 5 lápis pretos, 2 borrachas, 2 apontadores, 1 cola bastão, 2 canetas vermelhas e 2 azuis'),
+(2, 'Kit artes', '1 conjunto de canetinhas , 1 cx. de lápis de cor, 1cx. de giz de cera, 1 tesoura sem ponta'),
+(3, 'Kit cadernos', '1 caderno de desenho grande, 4 cadernos espiral capa dura de 100 folhas, 1 caderno quadriculado grande'),
+(4, 'Kit acessórios', '1 mochila, 1 lancheira, 1 garrafinha, 1 pote pequeno de plástico, 1 toalhinha de mão'),
+(5, 'Kit geométrico', '1 par de esquadros, 2 réguas de 30 cm, 1 compasso, 500 folhas de papel sulfite A4');
 
 -- --------------------------------------------------------
 

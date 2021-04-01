@@ -2,7 +2,7 @@ export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf,
     const conjCard = document.querySelector('.card-columns')
     
     const card = document.createElement('div')
-    card.setAttribute('class', 'card text-center')
+    card.setAttribute('class', 'card text-center my-3')
     card.setAttribute('id', `${id}`)
 
     card.innerHTML = `

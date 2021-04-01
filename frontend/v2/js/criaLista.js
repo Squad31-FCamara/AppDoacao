@@ -2,19 +2,21 @@ export default function criaLista(nome, itens, id, status){
     
     if(`${status}` == "Pendente"){
         
-        const opcoesKits = document.querySelector('.form-lista')
+        const opcoesKits = document.querySelector('#form-lista')
 
         const check = document.createElement('div')
-        check.setAttribute('class', 'form-check')
+        check.setAttribute('class', 'cartao-kits m-3' )
         check.setAttribute('id', `${id}`)
 
         check.innerHTML = `
-        <input class="form-check-input" type="checkbox" value="${id}" name="kit">
-        <label class="form-check-label">
-            <p class='kit-lista'>
-                ${nome} - ${itens}
-            </p>
-        </label>
+        <div class="form-check p-5">
+            <input class="form-check-input" type="checkbox" value="${id}" name="kit">
+            <label class="form-check-label">
+                <p class='kit-lista'>
+                    ${nome} - ${itens}
+                </p>
+            </label>
+        </div>
         `
         opcoesKits.appendChild(check)
 
