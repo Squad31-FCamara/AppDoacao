@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/aluno.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>EducAção</title>
 </head>
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <nav id="bg-navbar" class="navbar navbar-expand-lg navbar-light  p-3">
             <a class="navbar-brand pl-5" href="./index.html">
-                <img src="" width="50" height="50" alt="Logo EducAção">
+                <img src="../imgs/icon3.png" width="276" height="76">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -21,13 +21,13 @@
             <div class="collapse navbar-collapse mx-5 px-5" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link disabled pr-2" href="#">Blog</a>
+                        <a id="link-blog" class="nav-link disabled pr-2" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pr-2" href="./FAQ.html">Fale Conosco</a>
+                        <a id="link-fale" class="nav-link pr-2" href="./FAQ.html">Fale Conosco</a>
                     </li>
                     <li class="nav-item dropdown pr-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a  id="link-cadastro" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu">
@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown pl-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a  id="link-login" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </a>
                         <div class="dropdown-menu">
@@ -50,18 +50,10 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
-
-        <div class="container">
-            <div class="row justify-content-sm-center">
-                <h3 class="display-5">Selecione na lista o que você pode doar e conclua a doação</h3>
-                <p class="pt-2">Esse é o perfil individual do aluno, doe os materiais pedidos na lista</p>
-            </div>
-        </div>
-
         <div class="container my-5" id="dados-aluno">
 
             <div class="row my-5">
-                <a type="button" href="./cards_alunos.html" class="btn btn-primary">&larr; Anterior</a>
+                <a id="anterior" type="button" href="./cards_alunos.html" class="btn btn-default">&larr; Anterior</a>
             </div>   
             
             
@@ -70,34 +62,35 @@
                 <div class="col col-sm-9">
                     <div class="card-deck">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" id="escrita"> 
                                 <h5 class="card-title" id="escola-aluno"></h5>
                                 <h5 class="card-title" id="nivel-aluno"></h5>
                                 <p class="card-text" id="localidade-aluno"></p>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" id="escrita">
                                 <h5 class="card-title" id="title-sonho">Meu sonho é:</h5>
                                 <p class="card-text" id="sonho-aluno"></p>
                             </div>
                         </div>
                     </div>
-                   
+                    
+                    
                 </div>
             </div>
 
-            <form class="" action="">
-                <h2>Lista de Material</h2>
-                <p><em>Selecione os itens que você gostaria de doar</em></p>
+            <form action="">
+                <h2 id="titulo">Lista de Material</h2>
+                <p id="frase-3"><em>Selecione os itens que você gostaria de doar</em></p>
                 <div class="form-lista">
                     
                 </div>
                 <div class="row my-3" id="botoes-doar">
 
                     <div class="col-lg-6 text-center">
-                        <p class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Entregar os itens diretamente na escola escolhida"><em>Tenho os itens em mãos</em></p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal">
+                        <p id="sub-btn"class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Entregar os itens diretamente na escola escolhida"><em>Tenho os itens em mãos</em></p>
+                        <button id="agenda" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal">
                             Agendar entrega na escola
                         </button>
 
@@ -110,23 +103,23 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body" id="pop-up">
                                         <p>De acordo com a sua disponibilidade, data e hora para entrega dos itens de doação.</p>
                                         <form id="formAgendar">
                                             <div class="form-group">
                                                 <label for="data">Data:</label>
-                                                <input type="date" id="data" nome="data" placeholder="00/00/0000" required> 
+                                                <input type="date" id="data" nome="data" placeholder="00/00/0000"> 
                                             </div>
                                             <div class="form-group">
                                                 <label for="hora">Hora:</label>
-                                                <input type="time" id="hora" nome="hora" placeholder="10:00" required>
+                                                <input type="time" id="hora" nome="hora" placeholder="10:00">
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">E-mail:</label>
-                                                <input type="text" id="email" nome="email" placeholder="email@email.com" required>
+                                                <input type="text" id="email" nome="email" placeholder="email@email.com">
                                             </div>
                                         </form>
-                                        <p>
+                                        <p id="sub-btn">
                                             Obrigado por chegar até aqui,ficaremos aguardando a entrega
                                             da sua doação.Para ajudá-lo(a) enviaremos os itens da doação
                                             para o seu e-mail bem como a localização da escola.
@@ -143,8 +136,8 @@
                     </div>
 
                     <div class="col-lg-6 text-center">
-                        <p class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras"><em>Não tenho os itens em mãos</em></p>
-                        <button type="button" class="btn btn-success" disabled>
+                        <p id="sub-btn" class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras e enviar para o endereço da escola com nome e registro do aluno"><em>Não tenho os itens em mãos</em></p>
+                        <button id="realizar" type="button" class="btn btn-success" disabled>
                             Realizar compra online
                         </button>
                     </div>
@@ -192,8 +185,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
     <script type="module" src="../js/aluno-escolhido.js"></script>
-    <script type="module" src="../js/criaLista.js"></script>
-    <script type="module" src="../js/mudaStatusKit.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

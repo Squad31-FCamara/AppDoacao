@@ -18,20 +18,6 @@ a {
     background-color: #1E1E1E;
     font-family: Poppins;
 }
-#bg-index {
-    background-image: url('../imgs/garoto2.png');
-
-    background-position:contain;
-}
-
-#bg-rodape {
-    background-color: #1E1E1E;
-    font-family: Poppins;
-}
-#button-doar{
-    background-color: #37B4AA;
-    font-family: Poppins;
-}
 #link-blog{
     font-family: Poppins;
     color: white;
@@ -67,17 +53,38 @@ a {
     font-family: Poppins;
     font-weight: bold;
 }
-#num{
-    font-family: Poppins;
-    font-weight: bold;
-    color: #37B4AA;
-}
 #titulo-rodape{
     font-weight: bold;
     color: white;
     font-family: Poppins;
 }
-a :link{
-    text-decoration: none;
+select{
+    font-family: Poppins;
+}
+#busca-alunos{
+    background-color: #37B4AA;
+    font-family: Poppins;
     color: white;
+}
+#cancelar{
+    background-color: #37B4AA;
+    font-family: Poppins;
+    color: white;
+}
+#localidade{
+    background-color: #37B4AA;
+    font-family: Poppins;
+    color: white;
+}
+#sel{
+    font-family: Poppins;
+    border-radius: 5px;
+    border: 1px solid rgb(155, 153, 153);
+}
+#desc{
+    margin:0;
+    margin-top: 25px;
+    margin-left:-140px;
+    font-size: small;
+    color: rgb(155, 151, 151);
 }
