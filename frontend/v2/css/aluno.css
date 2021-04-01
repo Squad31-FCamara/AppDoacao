@@ -115,7 +115,7 @@ input{
     border: 1px solid rgb(209, 209, 209);
     border-radius: 5px;
 }
-#agendado{
+#botao-agendar{
     background-color: #37B4AA;
     font-family: Poppins;
     color: white;

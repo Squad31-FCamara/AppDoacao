@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/escola.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>EducAção</title>
 </head>
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <nav id="bg-navbar" class="navbar navbar-expand-lg navbar-light p-3">
             <a class="navbar-brand pl-5" href="./index.html">
-                <img src="" width="50" height="50" alt="Logo EducAção">
+                <img src="../imgs/icon3.png" width="276" height="76" alt="Logo EducAção">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -21,13 +21,13 @@
             <div class="collapse navbar-collapse mx-5 px-5" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link disabled pr-2" href="#">Blog</a>
+                        <a  id="link-blog" class="nav-link disabled pr-2" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link pr-2" href="./FAQ.html">Fale Conosco</a>
+                        <a  id="link-fale"class="nav-link pr-2" href="./FAQ.html">Fale Conosco</a>
                     </li>
                     <li class="nav-item dropdown pr-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a id="link-cadastro" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu">
@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown pl-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a id="link-login" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </a>
                         <div class="dropdown-menu">
@@ -53,15 +53,15 @@
         <div class="container my-3 px-5">
             
             <div class="row justify-content-sm-center">
-                <h3 class="display-5">Informe sua localização para indicarmos escolas perto de você</h3>
-                <p class="pt-2">As escolas são os pontos de coleta das doações do projeto</p>
+                <h3 id="titulo" class="display-5">Informe sua localização para indicarmos escolas perto de você</h3>
+                <p id="frase-3" class="pt-2">As escolas são os pontos de coleta das doações do projeto</p>
             </div>
 
             <div class="row justify-content-md-center">
                 <div class="col col-md-7">
                     <form class="my-3">
                         <div class="form-group">
-                            <label for="uf">UF:</label>
+                            <label id="titulo-n" for="uf">UF:</label>
                             <select class="form-control" id="uf" name="uf">
                                 <option value="">Selecione</option>
                                 <option value="AC">Acre</option>
@@ -94,11 +94,11 @@
                             </select>
                         </div>
                         <div class="form-group" >
-                            <label for="cidade">Município:</label>
+                            <label id="titulo-n" for="cidade">Município:</label>
                             <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Rio de Janeiro">
                         </div>
                         <div class="text-center">
-                            <button id="localidade" type="submit" class="btn btn-primary">Buscar</button>
+                            <button id="localidade" type="submit" class="btn btn-default">Buscar</button>
                         </div>
                 
                     </form>
@@ -109,8 +109,8 @@
                         </div>
     
                         <div class="text-center">
-                            <a type="button" href="./index.html" class="btn btn-primary">Cancelar</a>
-                            <button class="btn btn-primary" type="submit" id="busca-alunos">Continuar</button>
+                            <a type="button" id="cancelar" href="./index.html" class="btn btn-default">Cancelar</a>
+                            <button class="btn btn-default" type="submit" id="busca-alunos">Continuar</button>
                         </div>
                     </form>
                 </div>
