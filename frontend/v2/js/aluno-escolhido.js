@@ -3,12 +3,12 @@ import criaLista from './criaLista.js'
 async function dadosAluno() {
 
     const id = sessionStorage.getItem("id")
-    console.log(id)
+    //console.log(id)
 
     const resposta = await axios.get(`http://localhost:3333/donatarios/${id}`)
     const resultado = await resposta.data
 
-    console.log(resultado)
+    //console.log(resultado)
 
     function renderDadosAluno(resultado) {
         const avatarAluno = document.querySelector("#avatar-aluno")
@@ -33,12 +33,12 @@ async function dadosAluno() {
 async function listaAluno() {
 
     const id = sessionStorage.getItem("id")
-    console.log(id)
+    //console.log(id)
 
     const resposta = await axios.get(`http://localhost:3333/donatarios/${id}/lista`)
     const resultado = await resposta.data
 
-    console.log(resultado)
+    //console.log(resultado)
 
     resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
 }
