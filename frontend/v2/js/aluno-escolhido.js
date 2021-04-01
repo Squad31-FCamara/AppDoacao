@@ -28,20 +28,20 @@ async function dadosAluno() {
     }
 
     renderDadosAluno(resultado[0])
-}
 
-async function listaAluno() {
+    async function listaAluno() {
 
-    const id = sessionStorage.getItem("id")
-    //console.log(id)
-
-    const resposta = await axios.get(`http://localhost:3333/donatarios/${id}/lista`)
-    const resultado = await resposta.data
-
-    //console.log(resultado)
-
-    resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
+        const id = sessionStorage.getItem("id")
+        //console.log(id)
+    
+        const resposta = await axios.get(`http://localhost:3333/donatarios/${id}/lista`)
+        const resultado = await resposta.data
+    
+        //console.log(resultado)
+    
+        resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
+    }
+    listaAluno()
 }
 
 dadosAluno()
-listaAluno()

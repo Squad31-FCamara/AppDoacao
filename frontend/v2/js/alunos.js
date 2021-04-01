@@ -3,7 +3,7 @@ import criaCard from './criaCard.js'
 async function getAlunosPorEscola() {
     
     const id = window.location.href.split("?id=")[1]
-
+    
     const resposta = await axios.get(`http://localhost:3333/donatarios/escola/${id}`)
     const resultado = await resposta.data
     console.log(resultado)

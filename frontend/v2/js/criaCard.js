@@ -17,4 +17,6 @@ export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf,
 
     conjCard.append(card) 
 
+    
+
 } 

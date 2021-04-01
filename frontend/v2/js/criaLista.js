@@ -9,7 +9,7 @@ export default function criaLista(nome, itens, id, status){
         check.setAttribute('id', `${id}`)
 
         check.innerHTML = `
-        <input class="form-check-input" type="checkbox" value="${id}" name="id">
+        <input class="form-check-input" type="checkbox" value="${id}" name="kit">
         <label class="form-check-label">
             <p class='kit-lista'>
                 ${nome} - ${itens}

@@ -7,7 +7,6 @@ function getEscolas(){
         const cidade = document.querySelector('#cidade').value
 
         const valores = {'uf': uf, 'cidade': cidade}
-
         
         axios.post('http://localhost:3333/escolas/localidade', valores)
         .then(response => criarListaEscolas(response.data))
