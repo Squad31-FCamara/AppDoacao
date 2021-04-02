@@ -2,10 +2,10 @@ import criaLista from './criaLista.js'
 
 async function dadosAluno() {
 
-    const id = sessionStorage.getItem("id")
+    const id_aluno = localStorage.getItem("id_aluno")
     //console.log(id)
 
-    const resposta = await axios.get(`http://localhost:3333/donatarios/${id}`)
+    const resposta = await axios.get(`http://localhost:3333/donatarios/${id_aluno}`)
     const resultado = await resposta.data
 
     //console.log(resultado)
@@ -31,10 +31,10 @@ async function dadosAluno() {
 
     async function listaAluno() {
 
-        const id = sessionStorage.getItem("id")
+        const id_aluno = localStorage.getItem("id_aluno")
         //console.log(id)
     
-        const resposta = await axios.get(`http://localhost:3333/donatarios/${id}/lista`)
+        const resposta = await axios.get(`http://localhost:3333/donatarios/${id_aluno}/lista`)
         const resultado = await resposta.data
     
         //console.log(resultado)
@@ -42,6 +42,10 @@ async function dadosAluno() {
         resultado.map(lista => criaLista(lista.nome, lista.itens, lista.id, lista.status_item))
     }
     listaAluno()
+
+    const id_escola = localStorage.getItem("id_escola")
+    const botaoAnterior = document.querySelector('#anterior')
+    botaoAnterior.setAttribute('href',`http://127.0.0.1:5500/frontend/v2/html/cards_alunos.html?id=${id_escola}`)
 }
 
 dadosAluno()

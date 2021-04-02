@@ -10,14 +10,14 @@ function mudaStatusKit() {
             for (var i = 0; i < kitsSelecionados.length; i++) {
               values.push(kitsSelecionados[i].value);
             }
-            console.log(values)
+            //console.log(values)
             return values
         }
 
         const ids = getValues()
 
         ids.map(id => {
-            console.log(id)
+            //console.log(id)
             axios.patch(`http://localhost:3333/kit/${id}/status`)
             .then(response => criarAlerta(response.data))
             .catch(error => console.log(error))

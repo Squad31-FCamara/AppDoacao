@@ -2,9 +2,10 @@ import criaCard from './criaCard.js'
 
 async function getAlunosPorEscola() {
     
-    const id = window.location.href.split("?id=")[1]
+    //const id = window.location.href.split("?id=")[1]
+    const id_escola = localStorage.getItem("id_escola")
     
-    const resposta = await axios.get(`http://localhost:3333/donatarios/escola/${id}`)
+    const resposta = await axios.get(`http://localhost:3333/donatarios/escola/${id_escola}`)
     const resultado = await resposta.data
     console.log(resultado)
 
@@ -12,15 +13,15 @@ async function getAlunosPorEscola() {
 
     const buttonsAluno = document.querySelectorAll(".button-aluno")
 
-    buttonsAluno.forEach( button => button.addEventListener('click', (event) => {
+    buttonsAluno.forEach( button => button.addEventListener('click', () => {
        
-        sessionStorage.setItem("id", button.id)
+        localStorage.setItem("id_aluno", button.id)
     })
     )
-
+/* 
     if(window.location.href !== "http://127.0.0.1:5500/frontend/v2/aluno.html"){
         sessionStorage.clear()
-    }
+    } */
 
 }
 

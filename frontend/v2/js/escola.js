@@ -42,7 +42,24 @@ function getEscolas(){
                 opcoesEscolas.appendChild(groupEscolas)
 
             })
+
+            const divBotoes = document.querySelector('#div-botoes')
+            const botaoBuscarAlunos = document.createElement('button')
+            botaoBuscarAlunos.setAttribute('class', 'btn btn-default')
+            botaoBuscarAlunos.setAttribute('type', 'submit')
+            botaoBuscarAlunos.setAttribute('id', 'busca-alunos')
+            botaoBuscarAlunos.innerHTML = "Continuar";
+
+            divBotoes.appendChild(botaoBuscarAlunos)
+
+            botaoBuscarAlunos.addEventListener('click', (event) => {
+                
+                const checked = document.querySelector('input[name="id"]:checked').value;
+                //console.log(checked)
+                localStorage.setItem("id_escola", checked)
+            }) 
         }
+    
     })
 }
 
