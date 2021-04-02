@@ -9,7 +9,10 @@
     list-style:none;
     border:0;
 }
-
+#btn{
+    background-color: white;
+    border-radius: 10px;
+}
 a {
     text-decoration: none;
     color:white;
@@ -28,7 +31,7 @@ a {
 }
 #link-cadastro{
     font-family: Poppins;
-    color: white;
+    color: #37B4AA;
 }
 #link-fale{
     font-family: Poppins;
@@ -75,4 +78,7 @@ select{
     background-color: #37B4AA;
     font-family: Poppins;
     color: white;
+}
+#form-escolas{
+     font-family: Poppins;
 }
