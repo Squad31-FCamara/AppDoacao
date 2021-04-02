@@ -1,8 +1,8 @@
-export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf, sonho, id) {
+export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf, sonho, id, tipo) {
     const conjCard = document.querySelector('.card-columns')
     
     const card = document.createElement('div')
-    card.setAttribute('class', 'card text-center my-3')
+    card.setAttribute('class', `card text-center my-3 ${tipo}`)
     card.setAttribute('id', `${id}`)
 
     card.innerHTML = `
@@ -16,7 +16,4 @@ export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf,
     `
 
     conjCard.append(card) 
-
-    
-
 } 
