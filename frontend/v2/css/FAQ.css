@@ -9,6 +9,10 @@
     list-style:none;
     border:0;
 }
+#btn{
+    background-color: white;
+    border-radius: 10px;
+}
 #bg-rodape{
     background-color: #1E1E1E;
     font-family: Poppins;
@@ -32,6 +36,7 @@ a {
 #link-cadastro{
     font-family: Poppins;
     color: white;
+    color: #37B4AA;
 }
 #link-fale{
     font-family: Poppins;

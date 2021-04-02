@@ -11,7 +11,7 @@ export default function criaCard(imagem, nome_escola, nivel, ano, municipio, uf,
         <h5 class="card-title">${nome_escola} - ${nivel}, ${ano}</h5>
         <p class="card-text">${municipio}, ${uf}</p>
         <p class="card-text font-italic">${sonho}</p>
-        <button class="btn btn-secondary button-aluno" id=${id} type="submit"><a href="./aluno.html">Quero doar!<a></button>
+        <button style="color:white; background-color:#37B4AA; border:none; " class="btn btn-secondary button-aluno" id=${id} type="submit"><a style="color:white;" href="./aluno.html">Quero doar!<a></button>
     </div>
     `
 
