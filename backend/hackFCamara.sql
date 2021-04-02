@@ -181,7 +181,12 @@ CREATE TABLE `lista` (
 --
 
 INSERT INTO `lista` (`id_lista`, `id_donatario`, `tipo`) VALUES
-(1, 1, 'material_escolar');
+(1, 1, 'material'),
+(2, 2, 'material'),
+(3, 3, 'uniforme'),
+(4, 4, 'material'),
+(5, 5, 'eletronico'),
+(6, 6, 'uniforme'),;
 
 --
 -- Índices de tabelas apagadas
