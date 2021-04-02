@@ -43,14 +43,7 @@ function getEscolas(){
 
             })
 
-            const divBotoes = document.querySelector('#div-botoes')
-            const botaoBuscarAlunos = document.createElement('button')
-            botaoBuscarAlunos.setAttribute('class', 'btn btn-default')
-            botaoBuscarAlunos.setAttribute('type', 'submit')
-            botaoBuscarAlunos.setAttribute('id', 'busca-alunos')
-            botaoBuscarAlunos.innerHTML = "Continuar";
-
-            divBotoes.appendChild(botaoBuscarAlunos)
+            const botaoBuscarAlunos = document.querySelector('#busca-alunos')
 
             botaoBuscarAlunos.addEventListener('click', (event) => {
                 

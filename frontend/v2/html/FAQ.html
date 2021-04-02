@@ -87,20 +87,20 @@
                 <p id="sub-btn" class="lead p-3">Envie uma mensagem para nós ou entre em contato com as informações abaixo</p>
             </div>
 
-            <form class="mx-auto" action='' method="POST">
+            <form class="mx-auto" id="form-contato" action='' method="POST">
                 <div class="row justify-content-md-center">
                     <div class="col col-md-7">
                         <div class="form-group" id="titulo">
                             <label for="name"><b>Nome:</b></label>
-                            <input class="form-control" type="text" name="nome" placeholder="Nome completo">
+                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome completo" required>
                         </div>
                         <div class="form-group" id="titulo">
                             <label for="email"><b>E-mail:</b></label>
-                            <input class="form-control" type="text" name="email" placeholder="email@email.com">
+                            <input class="form-control" type="text" name="email" id="email" placeholder="email@email.com" required>
                         </div>
                         <div class="form-group" id="titulo">
                             <label for= "assunto"><b>Assunto:</b></label>
-                            <select class="form-control" name="assunto" id="assunto">
+                            <select class="form-control" name="assunto" id="assunto" required>
                                 <option hidden disabled selected value>Escolha uma opção</option>
                                 <option value="crítica">Crítica</option>
                                 <option value="elogio">Elogio</option>
@@ -111,10 +111,10 @@
                         </div>
                         <div class="form-group" id="titulo">
                             <label for="mensagem"><b>Mensagem: </b></label>
-                            <textarea class="form-control" name="mensagem" rows="10" placeholder="Deixe aqui sua mensagem"></textarea><br>
+                            <textarea class="form-control" name="mensagem" id="mensagem" rows="10" placeholder="Deixe aqui sua mensagem" required></textarea><br>
                         </div>
                         <div class="text-center mb-5">
-                            <button id="enviar" class="btn btn-default" type="submit">Enviar</button>
+                            <button id="enviar-mensagem" class="btn btn-default" type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,8 @@
         </div>
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="../js/mensagem.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
