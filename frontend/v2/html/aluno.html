@@ -51,11 +51,10 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
+
         <div class="container-fluid"> 
             <div class="row">
-                <p class="col-2"></p>
-                <img  class="col" src="../imgs/passo3.png">
-                <p class="col-2"></p>
+                <img src="../imgs/passo3.png"  class="p-5 mx-auto img-fluid" width="90%">
             </div>
         </div>
         <div class="container my-5" id="dados-aluno">
@@ -96,10 +95,74 @@
                 <div class="row my-3" id="botoes-doar">
 
                     <div class="col-lg-6 text-center">
-                        <p id="sub-btn"class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Entregar os itens diretamente na escola escolhida"><em>Tenho os itens em mãos</em></p>
-                        <button id="agenda" type="button" class="btn btn-default" href="./agendar_doacao.html">
-                            Agendar entrega na escola
+                        <p id="sub-btn"class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="A retirada do material será feita no endereço informado"><em>Tenho os itens em mãos</em></p>
+                        <button id="agenda" type="button" class="btn btn-default" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            Agendar retirada da doação
                         </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">Agendar a entrega de doação</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="pop-up">
+                                        <div class="row">
+                                            <img src="../imgs/passo4.png"  class="p-5 mx-auto img-fluid">
+                                        </div>
+                                        <p>De acordo com a sua disponibilidade, data e hora para entrega dos itens de doação.</p>
+                                        <form id="formAgendar">
+                                            <div class="form-row align-items-center justify-content-center">
+                                                <div class="form-group px-3">
+                                                    <label for="data" class="col-form-label">Data</label>
+                                                    <input type="date" id="data" name="data"> 
+                                                </div>
+                                                <div class="form-group px-3">
+                                                    <label for="hora" class="col-form-label">Hora</label>
+                                                    <input type="time" id="hora" name="hora">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nome" class="col-form-label">Nome</label>
+                                                <input type="text" id="nome" name="nome">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cpf" class="col-form-label">CPF</label>
+                                                <input type="text" id="cpf" name="cpf">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="endereco" class="col-form-label">Endereço</label>
+                                                <input type="text" id="endereco" name="endereco">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="complemento" class="col-form-label">Complemento</label>
+                                                <input type="text" id="complemento" name="complemento"> 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="bairro" class="col-form-label">Bairro</label>
+                                                <input type="text" id="bairro" name="bairro">
+                                            </div>
+                                        </form>
+                                        <div id="mensagem">
+                
+                                        </div>
+                                        <p id="sub-btn">
+                                            Obrigado por chegar até aqui,ficaremos aguardando a entrega
+                                            da sua doação.Para ajudá-lo(a) enviaremos os itens da doação
+                                            para o seu e-mail bem como a localização da escola.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.location.reload()">Fechar</button>
+                                        <button type="submit" class="btn btn-primary" id="botao-agendar">Agendar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <div class="col-lg-6 text-center">

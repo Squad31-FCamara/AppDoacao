@@ -4,7 +4,7 @@ class Lista {
 
     altera(id, res){
         
-        const sql = `UPDATE kitsPedido SET status_item = "Doado" WHERE id = ${id} `
+        const sql = `UPDATE kitsPedido SET status_item = "Agendado" WHERE id = ${id} `
 
         conexao.query(sql, (error, results) => {
             if(error){

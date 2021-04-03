@@ -9,15 +9,6 @@ async function getAlunosPorEscola() {
     const resultado = await resposta.data
     console.log(resultado)
 
-/*     const checkboxes = document.querySelectorAll("input[type='checkbox']");
-    const checkboxValues = [];
-    checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) checkboxValues.push(checkbox.value);
-    });
-
-    console.log(checkboxValues)
- */
-
     resultado.map(aluno => criaCard(aluno.avatar, aluno.nome_escola, aluno.segmento_ensino, aluno.serie_ensino, aluno.cidade, aluno.uf, aluno.sonho_profissao, aluno.id_donatario, aluno.tipo)) 
 
     const buttonsAluno = document.querySelectorAll(".button-aluno")
@@ -35,4 +26,9 @@ async function getAlunosPorEscola() {
 }
 
 getAlunosPorEscola()
+
+
+function filtraCards() {
+
+}
 
