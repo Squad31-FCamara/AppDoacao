@@ -54,62 +54,25 @@
         <div class="container-fluid"> 
             <div class="row">
                 <p class="col-2"></p>
-                <img  class="col" src="../imgs/passo3.png">
+                <img  class="col" src="../imgs/passo4.png" width="70%">
                 <p class="col-2"></p>
             </div>
         </div>
-        <div class="container my-5" id="dados-aluno">
+        <div class="container my-5" id="agendar-doacao">
             <div class="row my-5">
-                <a id="anterior" type="button" href="" class="btn btn-default">&larr; Anterior</a>
+                <a id="anterior" type="button" href="./aluno.html" class="btn btn-default">&larr; Anterior</a>
             </div>   
             
-            
             <div class="row py-3">
-                <div class="col col-sm-3" id="avatar-aluno"></div>
-                <div class="col col-sm-9">
-                    <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body" id="escrita"> 
-                                <h5 class="card-title" id="escola-aluno"></h5>
-                                <h5 class="card-title" id="nivel-aluno"></h5>
-                                <p class="card-text" id="localidade-aluno"></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body" id="escrita">
-                                <h5 class="card-title" id="title-sonho">Meu sonho é:</h5>
-                                <p class="card-text" id="sonho-aluno"></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+                <h2 id="titulo">Conclua a sua doação</h2>
+                <p id="frase-3">Obrigado por agendar sua entrega!</p>
             </div>
-
+                
             <form action="">
-                <h2 id="titulo">Lista de Material</h2>
-                <p id="frase-3"><em>Selecione os itens que você gostaria de doar</em></p>
-                <div class="form-lista">
-                    
-                </div>
-                <div class="row my-3" id="botoes-doar">
 
-                    <div class="col-lg-6 text-center">
-                        <p id="sub-btn"class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Entregar os itens diretamente na escola escolhida"><em>Tenho os itens em mãos</em></p>
-                        <button id="agenda" type="button" class="btn btn-default" href="./agendar_doacao.html">
-                            Agendar entrega na escola
-                        </button>
-                    </div>
 
-                    <div class="col-lg-6 text-center">
-                        <p id="sub-btn" class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras"><em>Não tenho os itens em mãos</em></p>
-                        <button id="realizar" type="button" class="btn btn-success" disabled>
-                            Realizar compra online
-                        </button>
-                    </div>
                     
-                </div>
+
             </form>
 
         </div>
@@ -119,18 +82,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
     <script type="module" src="../js/aluno-escolhido.js"></script>
-    <script type="module" src="../js/mudaStatusKit.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();   
-        });
-    </script>
 
 </body>
 </html>
