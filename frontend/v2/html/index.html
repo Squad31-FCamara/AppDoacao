@@ -10,9 +10,9 @@
 </head>
 <body>
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light p-4"  id="bg-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light p-3"  id="bg-navbar">
             <a class="navbar-brand pl-5" href="./index.html">
-                <img src="../imgs/icon3.png" width="200">
+                <img src="../imgs/icon4.png" width="195">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -50,10 +50,15 @@
     </header>
         
     <main class="container-fluid p-0 m-0">
-        
+        <div id="sociais">
+            <img src="../imgs/facebook.png" width="30px" height="30px">
+            <img src="../imgs/instagram.png" width="30px" height="30px">
+            <img src="../imgs/messenger2.png" width="30px" height="30px">
+            <img src="../imgs/whatsapp.png" width="30px" height="30px">
+        </div>        
         <div class="container-fluid p-0 m-0" id="bg-index">
             <div class="row p-5">
-                <div class="col-5">
+                <div class="col-12 col-sm-5 col-md-5">
                     <h1 id="frase-1">
                         Incentivar o aprendizado é acreditar no futuro. Doe material escolar.
                     </h1>
@@ -74,29 +79,30 @@
                 </p>
             </div>
 
-            <div class="card-deck px-5">
-                <div class="card p-3">
+            <div  class="card-deck px-5">
+                <div id="mater" class="card p-3">
                     <img class="mx-auto" src="../imgs/write_1.png" width="59" height="59" alt="Imagem de capa do card">
                     <div class="card-body text-center">
                         <h5 id="titulo" class="card-title">Materiais escolares</h5>
                         <p id="frase-3" class="card-text">Doe itens como caderno, lápis, borracha...</p>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div id="uni" class="card p-3">
                     <img class="mx-auto" src="../imgs/uniform_1.png" width="59" height="59" alt="Imagem de capa do card">
                     <div class="card-body text-center">
                         <h5  id="titulo" class="card-title">Uniforme Escolar</h5>
                         <p  id="frase-3" class="card-text">Doe itens como camiseta, agasalho, tênis...</p>
                     </div>
                 </div>
-                <div class="card p-3">
+                <div  id="equi"class="card p-3">
                     <img class="mx-auto" src="../imgs/smartphone_1.png" width="59" height="59" alt="Imagem de capa do card">
                     <div class="card-body text-center">
                         <h5  id="titulo" class="card-title">Equipamentos eletrônicos</h5>
                         <p  id="frase-3" class="card-text">Doe itens como celular, tablet, notebook...</p>
                   </div>
                 </div>
-                <div class="card p-3">
+                <div id="pi" class="card p-3">
+                    <img class="mx-auto" src="../imgs/embreve.png" width="59" height="29" alt="Imagem de capa do card">
                     <img class="mx-auto" src="../imgs/pix_1.png" width="59" height="59" alt="Imagem de capa do card">
                     <div class="card-body text-center">
                         <h5  id="titulo" class="card-title">Doação em pix</h5>
@@ -135,11 +141,13 @@
                 Prezamos pela transparência e prestamos toda a assistência necessária aos nossos doadores. Veja estes depoimentos:            </p>
             <div class="container">
                 <div class="row">
-                    <div class="col text-justify depoimento">
+                    <div id="doa" class="col text-justify depoimento">
+                        <img src="../imgs/aspas.png">
                         <p id="frase-3"><em>Sempre quis doar materiais escolares, mas me sentia insegura em doar para intermediários. Meu medo era a doação não chegar ao seu destino. Por meio da EducAção, eu consegui ajudar de forma segura e rápida. </em></p>
                         <p id="titulo"><strong>Cecília Silva.</strong></p>
                     </div>
-                    <div class="col text-justify depoimento">
+                    <div id="doa" class="col text-justify depoimento">
+                        <img src="../imgs/aspas.png">
                         <p id="frase-3"><em>Sempre que sobravam materiais escolares dos meu filhos, eu tentava doar, mas não conhecia famílias que, de fato, necessitavam. Por meio dessa plataforma eu consegui doar materiais que acabariam indo para o lixo. Só tenho a agradecer!</em></p>
                         <p id="titulo"><strong>Doador Anônimo</strong></p>
                     </div>
@@ -181,27 +189,27 @@
         <div class="row">
             <div class="col">
                 <p>      
-                    <img src="../imgs/icon3.png" width="256" height="76" >
+                    <img src="../imgs/icon4.png" width="256" height="76" >
                 </p>
             </div>
             <div class="col">
                 <div class="row">
                     <div class="col">
-                        <p id="titulo-rodape"><a href="#">REDES SOCIAIS</a></p>
-                        <p><img src='../imgs/facebook.png' width="30" height="30"><a href="#">Facebook</a></p>
-                        <p><img src='../imgs/instagram.png' width="30" height="30"><a href="#">Instagram</a></p>
+                        <p ><a id="link-rodape" href="#">REDES SOCIAIS</a></p>
+                        <p><img  src='../imgs/facebook.png' width="30" height="30"><a id="link-rodape" href="#">Facebook</a></p>
+                        <p><img  src='../imgs/instagram.png' width="30" height="30"><a id="link-rodape" href="#">Instagram</a></p>
                     </div>
 
                     <div class="col">
-                        <p id="titulo-rodape"><a href="#">PROJETO</a</p>
-                        <p><a href="#">Quem Somos</a></p>
-                        <p><a href="#">Política de Privacidade</a></p>
+                        <p ><a  id="link-rodape" href="#">PROJETO</a</p>
+                        <p><a id="link-rodape" href="#">Quem Somos</a></p>
+                        <p><a  id="link-rodape" href="#">Política de Privacidade</a></p>
                     </div>
 
                     <div class="col">
-                        <p id="titulo-rodape"><a href="#">CONTATO</a></p>
-                        <p><a href="#">contato@projeto.com</a></p>
-                        <p><a href="#">0800 775 5531</a></p>                    
+                        <p ><a id="link-rodape" href="#">CONTATO</a></p>
+                        <p><a id="link-rodape" href="#">contato@projeto.com</a></p>
+                        <p><a id="link-rodape" href="#">0800 775 5531</a></p>                    
                     </div>
                 </div> 
             </div>
