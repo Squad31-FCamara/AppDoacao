@@ -5,14 +5,11 @@
 * {
     padding:0;
     margin:0;
-    vertical-align:baseline;
     list-style:none;
     border:0;
 }
 #sociais{
-    position: absolute;
-    margin-left: 1280px;
-    margin-top: 200px;
+    position:fixed;
     width: 30px;
     height: 30px;
 }
@@ -31,7 +28,6 @@ a {
 }
 #bg-index {
     background-image: url('../imgs/garoto2.png');
-
     background-position:contain;
 }
 
