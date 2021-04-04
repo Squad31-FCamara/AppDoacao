@@ -23,8 +23,8 @@ a {
     font-family: Poppins;
 }
 #bg-index {
-    background-image: url('../imgs/garoto2.png');
-    background-position:contain;
+    background-image: url('../imgs/principal2.png');
+    background-position:80%;
 }
 
 #bg-rodape {
