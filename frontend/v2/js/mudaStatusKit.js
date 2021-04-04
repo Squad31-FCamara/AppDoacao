@@ -4,7 +4,7 @@ function mudaStatusKit() {
     botaoSubmit.addEventListener('click', async(event) => {
         event.preventDefault()
 
-        const id_aluno = localStorage.getItem("id_aluno")
+        const id_aluno = sessionStorage.getItem("id_aluno")
         console.log(id_aluno)
 
         const data = document.querySelector('#data').value

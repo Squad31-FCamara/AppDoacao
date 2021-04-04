@@ -8,6 +8,7 @@ function getEscolas(){
 
         const valores = {'uf': uf, 'cidade': cidade}
         
+        
         axios.post('http://localhost:3333/escolas/localidade', valores)
         .then(response => criarListaEscolas(response.data))
         .catch(error => console.log(error))
@@ -49,7 +50,7 @@ function getEscolas(){
                 
                 const checked = document.querySelector('input[name="id"]:checked').value;
                 //console.log(checked)
-                localStorage.setItem("id_escola", checked)
+                sessionStorage.setItem("id_escola", checked)
             }) 
         }
     
