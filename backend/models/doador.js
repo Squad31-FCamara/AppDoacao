@@ -10,7 +10,7 @@ class Doador{
             if(error){
                 res.status(400).json(error)
             } else {
-                res.status(201).json({'mensagem': `Cadastro foi criado com sucesso`})
+                res.status(201).json({'mensagem': "Agendamento realizado com sucesso!"})
             }
         })
     }
@@ -18,6 +18,19 @@ class Doador{
     lista(res){
         
         const sql = `SELECT * FROM doador`
+
+        conexao.query(sql, (error, results) => {
+            if(error){
+                res.status(400).json(error)
+            } else {
+                res.status(200).json(results)
+            }
+        })
+    }
+
+    idLastInsert(res){
+        
+        const sql = `SELECT LAST_INSERT_ID()`
 
         conexao.query(sql, (error, results) => {
             if(error){

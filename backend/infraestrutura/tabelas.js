@@ -67,12 +67,16 @@ class Tabelas {
     criarDoador(){
         const sql = `CREATE TABLE IF NOT EXISTS doador(
             id_doador int NOT NULL AUTO_INCREMENT,
-            cpf_doador VARCHAR(11) NOT NULL,
-            nome_doador CHAR(60),
-            telefone_doador VARCHAR(11),
-            email_doador VARCHAR(40),
+            nome CHAR(60),
+            cpf VARCHAR(20),
+            telefone VARCHAR(20),
+            email VARCHAR(40),
+            endereco VARCHAR(50),
+            complemento VARCHAR(30),
+            bairro VARCHAR(20),
             donatario int,
-            forma_doacao VARCHAR(50),
+            data_agendada DATE,
+            horario_agendado TIME,
             data_doacao DATETIME DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (id_doador),
             FOREIGN KEY (donatario) REFERENCES donatario(id_donatario))`
@@ -122,10 +126,12 @@ class Tabelas {
             id int NOT NULL AUTO_INCREMENT,
             id_kit int,
             id_lista int,
+            id_doador int,
             status_item VARCHAR(20) NULL DEFAULT 'Pendente',
             PRIMARY KEY (id),
             FOREIGN KEY (id_lista) REFERENCES lista(id_lista),
-            FOREIGN KEY (id_kit) REFERENCES kit(id_kit))`
+            FOREIGN KEY (id_kit) REFERENCES kit(id_kit),
+            FOREIGN KEY (id_doador) REFERENCES doador(id_doador))`
         
         this.conexao.query(sql,(error) => {
             if(error){
@@ -135,6 +141,7 @@ class Tabelas {
             }
         })
     }
+
 
     criarFaleConosco() {
         const sql = `CREATE TABLE IF NOT EXISTS fale_conosco(

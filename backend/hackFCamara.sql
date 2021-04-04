@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 31/03/2021 às 16:51
+-- Tempo de geração: 03/04/2021 às 22:32
 -- Versão do servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versão do PHP: 7.4.3
 
@@ -30,12 +30,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `doador` (
   `id_doador` int NOT NULL,
-  `cpf_doador` varchar(11) NOT NULL,
-  `nome_doador` char(60) DEFAULT NULL,
-  `telefone_doador` varchar(11) DEFAULT NULL,
-  `email_doador` varchar(40) DEFAULT NULL,
+  `nome` char(60) DEFAULT NULL,
+  `cpf` varchar(20) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  `endereco` varchar(50) DEFAULT NULL,
+  `complemento` varchar(30) DEFAULT NULL,
+  `bairro` varchar(20) DEFAULT NULL,
   `donatario` int DEFAULT NULL,
-  `forma_doacao` varchar(50) DEFAULT NULL,
+  `data_agendada` date DEFAULT NULL,
+  `horario_agendado` time DEFAULT NULL,
   `data_doacao` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -153,6 +157,7 @@ CREATE TABLE `kitsPedido` (
   `id` int NOT NULL,
   `id_kit` int DEFAULT NULL,
   `id_lista` int DEFAULT NULL,
+  `id_doador` int DEFAULT NULL,
   `status_item` varchar(20) DEFAULT 'Pendente'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -160,9 +165,12 @@ CREATE TABLE `kitsPedido` (
 -- Despejando dados para a tabela `kitsPedido`
 --
 
-INSERT INTO `kitsPedido` (`id`, `id_kit`, `id_lista`, `status_item`) VALUES
-(1, 1, 1, 'Pendente'),
-(2, 3, 1, 'Pendente');
+INSERT INTO `kitsPedido` (`id`, `id_kit`, `id_lista`, `id_doador`, `status_item`) VALUES
+(1, 1, 1, NULL, 'Pendente'),
+(2, 2, 1, NULL, 'Pendente'),
+(3, 3, 1, NULL, 'Pendente'),
+(4, 4, 1, NULL, 'Pendente'),
+(5, 5, 1, NULL, 'Pendente');
 
 -- --------------------------------------------------------
 
@@ -186,7 +194,7 @@ INSERT INTO `lista` (`id_lista`, `id_donatario`, `tipo`) VALUES
 (3, 3, 'uniforme'),
 (4, 4, 'material'),
 (5, 5, 'eletronico'),
-(6, 6, 'uniforme'),;
+(6, 6, 'uniforme');
 
 --
 -- Índices de tabelas apagadas
@@ -230,7 +238,8 @@ ALTER TABLE `kit`
 ALTER TABLE `kitsPedido`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_lista` (`id_lista`),
-  ADD KEY `id_kit` (`id_kit`);
+  ADD KEY `id_kit` (`id_kit`),
+  ADD KEY `id_doador` (`id_doador`);
 
 --
 -- Índices de tabela `lista`
@@ -277,13 +286,13 @@ ALTER TABLE `kit`
 -- AUTO_INCREMENT de tabela `kitsPedido`
 --
 ALTER TABLE `kitsPedido`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `lista`
 --
 ALTER TABLE `lista`
-  MODIFY `id_lista` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_lista` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para dumps de tabelas
@@ -306,7 +315,8 @@ ALTER TABLE `donatario`
 --
 ALTER TABLE `kitsPedido`
   ADD CONSTRAINT `kitsPedido_ibfk_1` FOREIGN KEY (`id_lista`) REFERENCES `lista` (`id_lista`),
-  ADD CONSTRAINT `kitsPedido_ibfk_2` FOREIGN KEY (`id_kit`) REFERENCES `kit` (`id_kit`);
+  ADD CONSTRAINT `kitsPedido_ibfk_2` FOREIGN KEY (`id_kit`) REFERENCES `kit` (`id_kit`),
+  ADD CONSTRAINT `kitsPedido_ibfk_3` FOREIGN KEY (`id_doador`) REFERENCES `doador` (`id_doador`);
 
 --
 -- Restrições para tabelas `lista`

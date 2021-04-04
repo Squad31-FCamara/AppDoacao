@@ -1,8 +1,33 @@
 function mudaStatusKit() {
 
     const botaoSubmit = document.querySelector('#botao-agendar')
-    botaoSubmit.addEventListener('click', (event) => {
+    botaoSubmit.addEventListener('click', async(event) => {
         event.preventDefault()
+
+        const id_aluno = localStorage.getItem("id_aluno")
+        console.log(id_aluno)
+
+        const data = document.querySelector('#data').value
+        const hora = document.querySelector('#hora').value
+        const nome = document.querySelector('#nome').value
+        const cpf = document.querySelector('#cpf').value
+        const telefone = document.querySelector('#telefone').value
+        const email = document.querySelector('#email').value
+        const endereco = document.querySelector('#endereco').value
+        const complemento = document.querySelector('#complemento').value
+        const bairro = document.querySelector('#bairro').value
+        const donatario = id_aluno
+
+        const doador = {'nome': nome, 'cpf': cpf, 'telefone': telefone, 'email': email, 'endereco': endereco, 'complemento': complemento, 'bairro': bairro, 'donatario': donatario, 'data_agendada': data, 'horario_agendado': hora}
+        
+        axios.post('http://localhost:3333/doadores', doador)
+        .then(response => console.log(response.data.mensagem))
+        .catch(error => console.log(error))
+
+        const resposta = await axios.get(`http://localhost:3333/doadores/last`)
+        const resultado = await resposta.data[0]['LAST_INSERT_ID()']
+    
+        console.log(resultado)
 
         function getValues() {
             var kitsSelecionados = document.querySelectorAll('[name=kit]:checked');
@@ -18,7 +43,8 @@ function mudaStatusKit() {
 
         ids.map(id => {
             //console.log(id)
-            axios.patch(`http://localhost:3333/kit/${id}/status`)
+            const valores = {'status_item': "Agendado", 'id_doador': resultado}
+            axios.patch(`http://localhost:3333/kit/${id}/status`, valores)
             .then(response => criarAlerta(response.data))
             .catch(error => console.log(error))
 
@@ -31,7 +57,11 @@ function mudaStatusKit() {
                 <strong>Doação agendada com sucesso!</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button> `
+                </button> 
+                <p id="sub-btn">
+                Obrigado por chegar até aqui. Para ajudá-lo(a) enviaremos os itens da doação
+                para o seu e-mail bem como a data e hora do agendamento.
+                </p>`
             }
         })
 

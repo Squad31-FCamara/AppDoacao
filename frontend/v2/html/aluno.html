@@ -104,7 +104,7 @@
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Agendar a entrega de doação</h5>
+                                        <h5 class="modal-title" id="modalLabel">Agendar a retirada da doação</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -113,8 +113,8 @@
                                         <div class="row">
                                             <img src="../imgs/passo4.png"  class="p-5 mx-auto img-fluid">
                                         </div>
-                                        <p>De acordo com a sua disponibilidade, data e hora para entrega dos itens de doação.</p>
-                                        <form id="formAgendar">
+                                        <p>De acordo com a sua disponibilidade, data e hora para retirada dos itens de doação no endereço a ser informado.</p>
+                                        <form id="formAgendar"class="text-center">
                                             <div class="form-row align-items-center justify-content-center">
                                                 <div class="form-group px-3">
                                                     <label for="data" class="col-form-label">Data</label>
@@ -131,15 +131,23 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="cpf" class="col-form-label">CPF</label>
-                                                <input type="text" id="cpf" name="cpf">
+                                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="telefone" class="col-form-label">Telefone</label>
+                                                <input type="text" id="telefone" name="telefone" placeholder="(DDD)00000-0000">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="col-form-label">E-mail</label>
+                                                <input type="email" id="email" name="email" placeholder="email@email.com">
                                             </div>
                                             <div class="form-group">
                                                 <label for="endereco" class="col-form-label">Endereço</label>
-                                                <input type="text" id="endereco" name="endereco">
+                                                <input type="text" id="endereco" name="endereco" placeholder="Rua/Avenida/Estrada/...">
                                             </div>
                                             <div class="form-group">
                                                 <label for="complemento" class="col-form-label">Complemento</label>
-                                                <input type="text" id="complemento" name="complemento"> 
+                                                <input type="text" id="complemento" name="complemento" placeholder="n°/apt/casa/..."> 
                                             </div>
                                             <div class="form-group">
                                                 <label for="bairro" class="col-form-label">Bairro</label>
@@ -149,11 +157,6 @@
                                         <div id="mensagem">
                 
                                         </div>
-                                        <p id="sub-btn">
-                                            Obrigado por chegar até aqui,ficaremos aguardando a entrega
-                                            da sua doação.Para ajudá-lo(a) enviaremos os itens da doação
-                                            para o seu e-mail bem como a localização da escola.
-                                        </p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.location.reload()">Fechar</button>
@@ -166,9 +169,9 @@
                     </div>
 
                     <div class="col-lg-6 text-center">
-                        <p id="sub-btn" class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das papelarias parceiras"><em>Não tenho os itens em mãos</em></p>
+                        <p id="sub-btn" class="m-0 p-0 pt-3" data-toggle="tooltip" data-placement="top" title="Realizar a compra em uma das nossas papelarias parceiras"><em>Não tenho os itens em mãos</em></p>
                         <button id="realizar" type="button" class="btn btn-success" disabled>
-                            Realizar compra online
+                            Comprar em lojas parceiras
                         </button>
                     </div>
                     

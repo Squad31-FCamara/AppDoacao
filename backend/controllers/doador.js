@@ -13,4 +13,8 @@ module.exports = app => {
         Doador.lista(res)
     })
 
+    app.get('/doadores/last', (req, res) => {
+        Doador.idLastInsert(res)
+    })
+
 }
