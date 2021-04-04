@@ -18,11 +18,17 @@ function getEscolas(){
             
             const opcoesEscolas = document.querySelector('#form-escolas')
 
+            const tituloEscola = document.createElement('h4')
+            tituloEscola.setAttribute('class', 'py-3')
+            tituloEscola.innerHTML = 'Escolas Cadastradas nesse município'
+
+            opcoesEscolas.appendChild(tituloEscola)
+
             escolas.map(escola => {
 
                 const checkEscola = document.createElement('input')
                 checkEscola.setAttribute("type", "radio")
-                checkEscola.setAttribute("class", "form-check-input")
+                checkEscola.setAttribute("class", "form-check-input py-3")
                 checkEscola.setAttribute("value", `${escola.id_escola}`)
                 checkEscola.setAttribute("name", `id` )
                 checkEscola.setAttribute("id", `${escola.id_escola}` )
@@ -30,8 +36,8 @@ function getEscolas(){
                 const labelEscola = document.createElement('label')
                 labelEscola.setAttribute("class", "form-check-label")
                 labelEscola.setAttribute("for", `id_escola` )
-                labelEscola.innerHTML = `${escola.nome_escola} <br> 
-                Rede ${escola.rede} <br> 
+                labelEscola.innerHTML = `   ${escola.nome_escola} - 
+                Rede ${escola.rede} - 
                 Endereço: ${escola.logradouro}, ${escola.complemento} - ${escola.bairro}`
 
                 const groupEscolas = document.createElement('div')

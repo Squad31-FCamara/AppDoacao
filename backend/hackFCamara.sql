@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 03/04/2021 às 22:32
+-- Tempo de geração: 04/04/2021 às 19:02
 -- Versão do servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versão do PHP: 7.4.3
 
@@ -34,14 +34,25 @@ CREATE TABLE `doador` (
   `cpf` varchar(20) DEFAULT NULL,
   `telefone` varchar(20) DEFAULT NULL,
   `email` varchar(40) DEFAULT NULL,
+  `cep` varchar(15) DEFAULT NULL,
   `endereco` varchar(50) DEFAULT NULL,
+  `numero` varchar(5) DEFAULT NULL,
   `complemento` varchar(30) DEFAULT NULL,
   `bairro` varchar(20) DEFAULT NULL,
+  `cidade` varchar(30) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
   `donatario` int DEFAULT NULL,
   `data_agendada` date DEFAULT NULL,
   `horario_agendado` time DEFAULT NULL,
   `data_doacao` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `doador`
+--
+
+INSERT INTO `doador` (`id_doador`, `nome`, `cpf`, `telefone`, `email`, `cep`, `endereco`, `numero`, `complemento`, `bairro`, `cidade`, `uf`, `donatario`, `data_agendada`, `horario_agendado`, `data_doacao`) VALUES
+(1, 'Nathalia Dantas Viana', '14777232778', '2137108075', 'nathalia@nathalia.com', '24451-240', 'Rua Otávio Fonseca ', '152', 'Casa 1', 'Colubandê', 'São Gonçalo', 'RJ', 1, '2021-04-19', '08:00:00', '2021-04-04 19:02:21');
 
 -- --------------------------------------------------------
 
@@ -170,7 +181,7 @@ INSERT INTO `kitsPedido` (`id`, `id_kit`, `id_lista`, `id_doador`, `status_item`
 (2, 2, 1, NULL, 'Pendente'),
 (3, 3, 1, NULL, 'Pendente'),
 (4, 4, 1, NULL, 'Pendente'),
-(5, 5, 1, NULL, 'Pendente');
+(5, 5, 1, 1, 'Agendado');
 
 -- --------------------------------------------------------
 
@@ -256,7 +267,7 @@ ALTER TABLE `lista`
 -- AUTO_INCREMENT de tabela `doador`
 --
 ALTER TABLE `doador`
-  MODIFY `id_doador` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_doador` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `donatario`

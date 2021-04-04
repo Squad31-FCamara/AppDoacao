@@ -9,16 +9,20 @@ function mudaStatusKit() {
 
         const data = document.querySelector('#data').value
         const hora = document.querySelector('#hora').value
+        const cep = document.querySelector('#cep').value
+        const endereco = document.querySelector('#endereco').value
+        const numero = document.querySelector('#numero').value
+        const complemento = document.querySelector('#complemento').value
+        const bairro = document.querySelector('#bairro').value
+        const cidade = document.querySelector('#cidade').value
+        const uf = document.querySelector('#uf').value
         const nome = document.querySelector('#nome').value
         const cpf = document.querySelector('#cpf').value
         const telefone = document.querySelector('#telefone').value
         const email = document.querySelector('#email').value
-        const endereco = document.querySelector('#endereco').value
-        const complemento = document.querySelector('#complemento').value
-        const bairro = document.querySelector('#bairro').value
         const donatario = id_aluno
 
-        const doador = {'nome': nome, 'cpf': cpf, 'telefone': telefone, 'email': email, 'endereco': endereco, 'complemento': complemento, 'bairro': bairro, 'donatario': donatario, 'data_agendada': data, 'horario_agendado': hora}
+        const doador = {'nome': nome, 'cpf': cpf, 'telefone': telefone, 'email': email, 'cep': cep, 'endereco': endereco, 'numero': numero, 'complemento': complemento, 'bairro': bairro, 'cidade': cidade, 'uf': uf, 'donatario': donatario, 'data_agendada': data, 'horario_agendado': hora}
         
         axios.post('http://localhost:3333/doadores', doador)
         .then(response => console.log(response.data.mensagem))

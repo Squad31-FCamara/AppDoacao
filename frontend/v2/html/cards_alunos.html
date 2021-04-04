@@ -56,6 +56,13 @@
                 <img src="../imgs/passo2.png" class="p-5 mx-auto img-fluid" width="90%">
             </div>
         </div>
+
+        <div class="container my-4">
+            <div>
+                <a type="button" id="cancelar" href="./escola.html" class="btn btn-default">&larr; Anterior</a>
+            </div> 
+        </div>
+
         <div class="container my-3 px-5">
             <div class="row justify-content-sm-center">
                 <h3 id="titulo" class="display-5">Selecione a criança para quem deseja fazer a doação</h3>
@@ -64,22 +71,19 @@
         </div>
 
         <div class="container my-3">
-            <div class="row mx-auto">
+            <div class="row mx-5">
                 <form class="mx-auto" id="filtro-alunos">
-                    <div  id="sel"class="form-check form-check-inline px-3">
+                    <div  id="sel"class="form-check form-check-inline px-2">
                         <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="material" onclick="filtraCards('material')">
                         <label class="form-check-label" for="tipo_doacao">Material Escolar</label>
-                        <label id="desc">caderno,lápis,borracha..</label>
                     </div>
-                    <div id="sel" class="form-check form-check-inline px-3">
+                    <div id="sel" class="form-check form-check-inline px-2">
                         <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="uniforme" onclick="filtraCards('uniforme')">
                         <label class="form-check-label" for="tipo_doacao">Uniforme Escolar</label>
-                        <label id="desc">camisa,agasalho,tênis..</label>
                     </div>
-                    <div id="sel" class="form-check form-check-inline px-3">
+                    <div id="sel" class="form-check form-check-inline px-2">
                         <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="eletronico" onclick="filtraCards('eletronico')">
-                        <label  class="form-check-label" for="tipo_doacao">Equipamentos Eletrônicos</label>
-                        <label id="desc">celular,tablet,notebook..</label>
+                        <label  class="form-check-label" for="tipo_doacao">Eletrônicos</label>
                     </div>
                 </form>              
             </div>
@@ -91,12 +95,6 @@
             </div>
         </div>
 
-        <div class="container my-4">
-            <div class="text-center" >
-                <a type="button" id="cancelar" href="./escola.html" class="btn btn-default">&larr; Anterior</a>
-            </div> 
-        </div>
-            
     </main>
 
 
