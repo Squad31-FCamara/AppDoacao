@@ -125,7 +125,7 @@ a {
         background-position:55%;
     }
     #sociais{
-        position: absolute;
+        position: fixed;
         margin-left: 0px;
         margin-top: 200px;
         width: 30px;
