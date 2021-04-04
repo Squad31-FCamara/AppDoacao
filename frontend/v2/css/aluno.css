@@ -124,3 +124,17 @@ input{
     font-family: Poppins;
     color: white;
 }
+#info-ret{
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: left;
+}
+#titulo-nu{
+    font-family: Poppins;
+    font-weight: bold;
+}
+#info-pes{
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: left;
+}
