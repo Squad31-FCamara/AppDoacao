@@ -111,3 +111,25 @@ a {
     margin:4px;
     box-shadow: 2px 2px 0 rgb(124, 123, 123);   
 }
+@media (max-width:414px){
+    * {
+        padding:0px;
+        margin:0px;
+        vertical-align:baseline;
+        list-style:none;
+        border:0;
+    }
+    #bg-index{
+        background-image: url('../imgs/garoto2.png');
+
+        background-position:55%;
+    }
+    #sociais{
+        position: absolute;
+        margin-left: 0px;
+        margin-top: 200px;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+    }
+}
