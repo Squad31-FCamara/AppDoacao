@@ -115,52 +115,81 @@
                                         </div>
                                         <p id="titulo-n"><h2>Conclua a sua doação </h2></p>
                                         <p id="sub-btn">Obrigado por chegar até aqui! Agende data e hora, de acordo com a sua disponibilidade, para buscarmos sua doação.</p>
-                                        <form id="formAgendar"class="text-center">
-                                            <div class="form-row align-items-center justify-content-center">
+                                        
+                                        <form id="formAgendar">
+
+                                            <div class="container px-5">
                                                 <p id="titulo-n">Informações da retirada</p>
                                                 <div id="info-pes" class="form-group px-3">
-                                                    <label for="data" class="col-form-label">Data</label>
-                                                    <input type="date" id="data" name="data">
-                                                    <label for="hora" class="col-form-label">Hora</label>
-                                                    <input type="time" id="hora" name="hora"><br>
-                                                    <label for="endereco" class="col-form-label">Endereço</label>
-                                                    <input type="text" id="endereco" name="endereco" placeholder="Rua/Avenida/Estrada/...">
-                                                    <label for="complemento" class="col-form-label">Complemento</label>
-                                                    <input type="text" id="complemento" name="complemento" placeholder="n°/apt/casa/..."><br>
-                                                    <label for="bairro" class="col-form-label">Bairro</label>
-                                                    <input type="text" id="bairro" name="bairro">   
-                                                </div>
-                                                <div class="form-group px-3">
 
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="date" class="form-control" id="data" name="data">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="time" class="form-control" id="hora" name="hora">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="cep" name="cep" placeholder="  CEP">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="  Rua/Avenida/Estrada/...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="numero" name="numero" placeholder="  n°">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="complemento" name="complemento" placeholder="  Apt/Casa/Lote...">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="bairro" name="bairro" placeholder="  Bairro">   
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="  Cidade">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="uf" name="uf" placeholder="  UF">
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                            </div>
-                                            <div class="form-group">
+
+                                            <div class="container px-5">
+                                                <p id="titulo-nu">Informações pessoais</p>
+                                                <div id="info-pes" class="form-group px-3">
+
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="nome" name="nome" placeholder="  Nome Completo">
+                                                        </div>
+                                        
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="  CPF">
+                                                        </div>
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(DDD)Telefone">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col p-3">
+                                                            <input type="text" class="form-control" id="email" name="email" placeholder="  E-mail">
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
                                                 
                                             </div>
-                                            <p id="titulo-nu">Informações pessoais</p>
-                                            <div  id="info-pes" class="form-group px-3">
-                                                <label for="nome" class="col-form-label">Nome</label>
-                                                <input type="text" id="nome" name="nome"><br>
-                                                <label for="cpf" class="col-form-label">CPF</label>
-                                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
-                                                <label for="telefone" class="col-form-label">Telefone</label>
-                                                <input type="text" id="telefone" name="telefone" placeholder="(DDD)00000-0000"><br>                                                <label for="email" class="col-form-label">E-mail</label>
-                                                <input type="email" id="email" name="email" placeholder="email@email.com">
-                                            </div>
-                                            <div class="form-group">
-                                                
-                                            </div>
-                                            <div class="form-group">
-                                                
-                                            </div>
-                                            <div class="form-group">
-                                                
-                                            </div>
-                                            <div class="form-group">
-                                                
-                                            </div>
+
                                         </form>
                                         <div id="mensagem">
                 
