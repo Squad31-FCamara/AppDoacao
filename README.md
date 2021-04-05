@@ -1,4 +1,7 @@
-# EducAção
+# EducAção Solidária
+<img src="logo.svg">
+
+##Descrição do Projeto
 
 
 As seguintes ferramentas foram usadas na construção do projeto:
