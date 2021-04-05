@@ -78,7 +78,7 @@ frontend -> v2 -> html -> index.html
 [Luan Oliveira da Silva]()
 *Responsável pelo HTML e CSS do Frontend*
 
-[Nathalia Dantas](http://https://github.com/nathaliadv "Nathalia Dantas")
+[Nathalia Dantas](https://github.com/nathaliadv)
 *Responsável pelo JavaScript do Frontend e o NodeJs no Backend*
 
 
