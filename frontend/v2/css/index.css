@@ -27,6 +27,10 @@ a {
     background-position:80%;
 }
 
+#bg-sobre{
+    background-color: #E5E5E5;
+}
+
 #bg-rodape {
     background-color: #1E1E1E;
     font-family: Poppins;
