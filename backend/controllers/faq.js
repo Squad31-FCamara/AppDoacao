@@ -1,12 +1,10 @@
-const Mensagem = require('../models/faq')
+const Mensagem = require("../models/faq");
 
-module.exports = app => {
+module.exports = (app) => {
+  app.post("/mensagens", (req, res) => {
+    const mensagemUsuario = req.body;
+    //console.log(donatario)
 
-    app.post('/mensagens', (req, res) => {
-        
-        const mensagemUsuario = req.body
-        //console.log(donatario)
-
-        Mensagem.adiciona(mensagemUsuario, res)
-    })
-}
+    Mensagem.adiciona(mensagemUsuario, res);
+  });
+};

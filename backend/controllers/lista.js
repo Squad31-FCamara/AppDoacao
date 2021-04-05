@@ -1,12 +1,10 @@
-const Lista = require('../models/lista')
+const Lista = require("../models/lista");
 
-module.exports = app => {
+module.exports = (app) => {
+  app.patch("/kit/:id/status", (req, res) => {
+    const id = parseInt(req.params.id);
+    const valores = req.body;
 
-    
-    app.patch('/kit/:id/status', (req, res) => {
-        const id = parseInt(req.params.id)
-        const valores = req.body
-        
-        Lista.altera(id, valores, res) 
-    })
-}
+    Lista.altera(id, valores, res);
+  });
+};
