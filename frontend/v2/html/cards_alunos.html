@@ -73,20 +73,20 @@
 
         <div class="container my-3">
             <div class="row mx-5">
-                <form class="mx-auto" id="filtro-alunos">
+                <div class="mx-auto" id="filtro-alunos">
                     <div  id="sel"class="form-check form-check-inline px-2">
-                        <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="material" onclick="filtraCards('material')">
-                        <label class="form-check-label" for="tipo_doacao">Material Escolar</label>
+                        <button class="tipo_doacao" name="tipo" value="">Mostra Tudo</button>
+                    </div>
+                    <div  id="sel"class="form-check form-check-inline px-2">
+                        <button class="tipo_doacao" name="tipo" value="material">Material Escolar</button>
                     </div>
                     <div id="sel" class="form-check form-check-inline px-2">
-                        <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="uniforme" onclick="filtraCards('uniforme')">
-                        <label class="form-check-label" for="tipo_doacao">Uniforme Escolar</label>
+                        <button class="tipo_doacao" name="tipo" value="uniforme">Uniforme Escolar</button>
                     </div>
                     <div id="sel" class="form-check form-check-inline px-2">
-                        <input class="form-check-input" type="radio" id="tipo_doacao" name="tipo" value="eletronico" onclick="filtraCards('eletronico')">
-                        <label  class="form-check-label" for="tipo_doacao">Eletrônicos</label>
+                        <button class="tipo_doacao" name="tipo" value="eletronico">Eletrônicos</button>
                     </div>
-                </form>              
+                </div>              
             </div>
         </div>
 
@@ -103,6 +103,7 @@
 
     <script type="module" src="../js/alunos.js"></script>
     <script type="module" src="../js/criaCard.js"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
