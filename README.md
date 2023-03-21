@@ -75,7 +75,7 @@ frontend -> v2 -> html -> index.html
 
 ## :computer: Contribuidores
 
-[Luan Oliveira da Silva]()
+[Luan Oliveira da Silva](https://github.com/luan5454)
 *Responsável pelo HTML e CSS do Frontend*
 
 [Nathalia Dantas](https://github.com/nathaliadv)
